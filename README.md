@@ -1,2 +1,2 @@
 # anime_site
-Building A anime related site (in progress)
+Building A anime related site (in progress) 9/10/2019
