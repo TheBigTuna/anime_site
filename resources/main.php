@@ -8,6 +8,7 @@
             <script src="script/jquery-3.4.1.js"></script>
             <script src="script/bootstrap.js"></script>
             <?php include("resources/connection.php");?>
+            <?php include("api_config.php"); ?>
         </head>
     <body>
 
