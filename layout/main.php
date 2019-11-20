@@ -1,4 +1,4 @@
-  <header id="header">
+<header id="header">
     <div id="topbar">
       <div class="container">
         <div class="social-links">
@@ -13,7 +13,7 @@
     <div class="container">
       <div class="logo float-left">
         <!-- Uncomment below if you prefer to use an image logo -->
-        <h1 class="text-light"><a href="#intro" class="scrollto"><span>2DLIFE</span></a></h1>
+        <h1 class="text-light" ><a href="#intro" class="scrollto"><span>ANIMEROOMS</span></a></h1>
         <!-- <a href="#header" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> -->
       </div>
 
@@ -31,25 +31,27 @@
   </header>
 
   <section id="intro" class="clearfix">
-    <div class="container d-flex h-100">
-      <div class="row justify-content-center align-self-center">
-        <div class="col-md-6 intro-info order-md-first order-last">
-          <h2>Rapid Solutions<br>for Your <span>Business!</span></h2>
-          <div>
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+    <div class="container" style="background-image: url(images/books1.jpg); object-fit: contain; background-repeat: no-repeat; height: 100%; width: 100%; margin-top: 60px; margin-bottom: 30px;">
+      <div class="homeImgBg">
+        <div class="row justify-content-center align-self-center">
+          <div class="col-md-6 intro-info order-md-first order-last">
+            <!-- <h2>Rapid Solutions<br>for Your <span>Business!</span></h2> -->
+            <div>
+              <!-- <a href="#about" class="btn-get-started scrollto">Get Started</a> -->
+            </div>
           </div>
-        </div>
-  
-        <div class="col-md-6 intro-img order-md-last order-first">
-          <img src="img/intro-img.svg" alt="" class="img-fluid">
+    
+          <div class="col-md-6 intro-img order-md-last order-first">
+            <img src="img/intro-img.svg" alt="" class="img-fluid">
+          </div>
         </div>
       </div>
 
     </div>
-  </section><!-- #intro -->
+  </section>
 
   <main id="main">
-    <section id="about">
+    <!-- <section id="about">
 
       <div class="container">
         <div class="row">
@@ -76,9 +78,9 @@
         </div>
       </div>
 
-    </section>
+    </section> -->
 
-    <section id="services" class="section-bg">
+    <!-- <section id="services" class="section-bg">
       <div class="container">
 
         <header class="section-header">
@@ -136,8 +138,8 @@
         </div>
 
       </div>
-    </section>
-    <section id="why-us" class="wow fadeIn">
+    </section> -->
+    <!-- <section id="why-us" class="wow fadeIn">
       <div class="container-fluid">
         
         <header class="section-header">
@@ -215,12 +217,12 @@
         </div>
 
       </div>
-    </section>
+    </section> -->
 
     <!--==========================
       Call To Action Section
     ============================-->
-    <section id="call-to-action" class="wow fadeInUp">
+    <!-- <section id="call-to-action" class="wow fadeInUp">
       <div class="container">
         <div class="row">
           <div class="col-lg-9 text-center text-lg-left">
@@ -233,12 +235,12 @@
         </div>
 
       </div>
-    </section><!-- #call-to-action -->
+    </section> -->
 
     <!--==========================
       Features Section
     ============================-->
-    <section id="features">
+    <!-- <section id="features">
       <div class="container">
 
         <div class="row feature-item">
@@ -277,8 +279,8 @@
         </div>
 
       </div>
-    </section>
-    <section id="portfolio" class="section-bg">
+    </section> -->
+    <!-- <section id="portfolio" class="section-bg">
       <div class="container">
 
         <header class="section-header">
@@ -427,8 +429,8 @@
         </div>
 
       </div>
-    </section>
-    <section id="testimonials">
+    </section> -->
+    <!-- <section id="testimonials">
       <div class="container">
         <header class="section-header">
           <h3>Testimonials</h3>
@@ -482,8 +484,8 @@
 
 
       </div>
-    </section>
-    <section id="team" class="section-bg">
+    </section> -->
+    <!-- <section id="team" class="section-bg">
       <div class="container">
         <div class="section-header">
           <h3>Team</h3>
@@ -567,8 +569,8 @@
         </div>
 
       </div>
-    </section>
-    <section id="clients" class="wow fadeInUp">
+    </section> -->
+    <!-- <section id="clients" class="wow fadeInUp">
       <div class="container">
 
         <header class="section-header">
@@ -588,7 +590,7 @@
 
       </div>
     </section>
-    <section id="pricing" class="wow fadeInUp section-bg">
+    <!-- <section id="pricing" class="wow fadeInUp section-bg">
       <div class="container">
 
         <header class="section-header">
@@ -598,7 +600,6 @@
 
         <div class="row flex-items-xs-middle flex-items-xs-center">
       
-          <!-- Basic Plan  -->
           <div class="col-xs-12 col-lg-4">
             <div class="card">
               <div class="card-header">
@@ -661,8 +662,8 @@
         </div>
       </div>
 
-    </section>
-    <section id="faq">
+    </section> -->
+    <!-- <section id="faq">
       <div class="container">
         <header class="section-header">
           <h3>Frequently Asked Questions</h3>
@@ -727,10 +728,10 @@
         </ul>
 
       </div>
-    </section>
+    </section> -->
 
   </main>
-  <footer id="footer" class="section-bg">
+  <!-- <footer id="footer" class="section-bg">
     <div class="footer-top">
       <div class="container">
 
@@ -791,9 +792,9 @@
 
             </div>
 
-          </div>
+          </div> -->
 
-          <div class="col-lg-6">
+          <!-- <div class="col-lg-6">
 
             <div class="form">
               
@@ -826,7 +827,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <!-- Uncomment below i you want to use a preloader -->
   <!-- <div id="preloader"></div> -->

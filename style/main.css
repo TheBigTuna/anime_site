@@ -196,7 +196,7 @@ body {
     width: 100%;
     height: 100vh;
     position: relative;
-    background: #f5f8fd url("../img/intro-bg.jpg") center top no-repeat;
+    /* background: #f5f8fd url("../img/intro-bg.jpg") center top no-repeat; */
     background-size: cover;
   }
   
@@ -446,13 +446,6 @@ body {
     color: #fff;
   }
   
-  /*--------------------------------------------------------------
-  # Sections
-  --------------------------------------------------------------*/
-  
-  /* Sections Header
-  --------------------------------*/
-  
   .section-header h3 {
     font-size: 36px;
     color: #413e66;
@@ -471,15 +464,10 @@ body {
     width: 50%;
   }
   
-  /* Section with background
-  --------------------------------*/
   
   .section-bg {
     background: #f5f8fd;
   }
-  
-  /* About Us Section
-  --------------------------------*/
   
   #about {
     padding: 80px 0;
