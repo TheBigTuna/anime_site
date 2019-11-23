@@ -33,6 +33,14 @@
   transition: 0.3s;
 }
 
+.navMenuLink:hover,
+.navMenuLink:active,
+.navMenuLink:focus{
+  color: #0a98c0 !important;
+  outline: none;
+  text-decoration: none;
+}
+
 @media  only screen and (min-width: 568px) {
   .container-fluid {
     width: 550px;

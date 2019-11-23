@@ -7,7 +7,7 @@
     <div id="navbarNav">
       <ul class="navbar-nav" id="navbarMenu">
         <li class="nav-item active">
-          <a class="nav-link navMenuLink" href="#">anime <span class="sr-only">(current)</span></a>
+          <a class="nav-link navMenuLink active" href="#">anime</a>
         </li>
         <li class="nav-item">
           <a class="nav-link navMenuLink" href="#">manga</a>
