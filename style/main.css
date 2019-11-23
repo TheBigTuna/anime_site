@@ -1,4 +1,71 @@
 
+#mainNav{
+  padding: 0px 0px;
+  /* background-color: lightblue; */
+}
+
+#navLogoImg{
+  width: 12rem;
+  height: 12rem;
+  cursor: pointer;
+}
+
+#navImgContainer{
+  width: 100%;
+}
+
+#navbarNav{
+  width: 100%;
+}
+
+#navbarMenu{
+  /* background-color: red; */
+  float: right;
+}
+
+.navMenuLink{
+  color: #413e66 !important;
+  padding: 10px 15px !important;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+@media  only screen and (min-width: 568px) {
+  .container-fluid {
+    width: 550px;
+  }
+}
+@media  only screen and (min-width: 992px) {
+  .container-fluid {
+    width: 970px;
+  }
+}
+@media  only screen and (min-width: 1200px) {
+  .container-fluid {
+    width: 1170px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  #navLogoImg{
+    width: 9rem;
+    height: 9rem;
+    cursor: pointer;
+  }
+  #navImgContainer{
+    width: 60%;
+  }
+  #navbarNav{
+    width: 40%;
+  }
+}
+
+
+
+
 body {
     background: #fff;
     color: #444;
@@ -187,10 +254,6 @@ body {
   .main-pages {
     margin-top: 60px;
   }
-  
-  /*--------------------------------------------------------------
-  # Intro Section
-  --------------------------------------------------------------*/
   
   #intro {
     width: 100%;
