@@ -41,6 +41,16 @@
   text-decoration: none;
 }
 
+/* Admin Stylings */
+#createPostEnterTitle{
+  margin: 15px 0px;
+}
+
+#createPostTextBox{
+  margin: 15px 0px;
+  overflow-y: scroll;
+}
+
 @media  only screen and (min-width: 568px) {
   .container-fluid {
     width: 550px;
