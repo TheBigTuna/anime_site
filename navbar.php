@@ -47,6 +47,9 @@
                 <li class="nav-item">
                   <a class="nav-link navMenuLink" href="#">contact</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link navMenuLink" href="/anime_site/admin/index.php">Admin</a>
+                </li>
               </ul>
             </div>
           </nav>
