@@ -10,7 +10,7 @@
             <script src="/anime_site/script/jquery-3.4.1.js"></script>
             <script src="/anime_site/script/bootstrap.js"></script>
 			      <script src="/anime_site/script/main.js"></script>
-            <!-- <?php include("/anime_site/resources/connection.php");?> -->
+            <?php include("resources/connection.php"); ?>
             <!-- <?php include("/anime_site/api_config.php"); ?> -->
             <!-- Global site tag (gtag.js) - Google Analytics -->
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152462977-1"></script>

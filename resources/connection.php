@@ -2,9 +2,9 @@
 // connection file to local DB
 $servername = "localhost";
 $username = "root";
-$password = "deandre94";
+$password = "";
 $conn = mysqli_connect($servername, $username, $password);
 if($conn == true){
-    // echo "Connected";
+    echo "Connected";
 }
 ?>
