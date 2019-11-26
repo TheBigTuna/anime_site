@@ -53,6 +53,8 @@
 
 #CreatePostSelectTags{
   margin: 15px 0px;
+  height: 180px;
+  overflow-y: auto;
 }
 
 #CreatePostSelectPostType{

@@ -3,9 +3,11 @@
 ?>
 
 <div class="container">
+    <!-- Enter Title -->
         <h4>Enter Text</h4>
         <input type="text" id="createPostEnterTitle" class="form-control" placeholder="Enter Title">
 
+    <!-- Select The Type of Post -->
         <h4>Post Type</h4>
             <select class="form-control" id="CreatePostSelectPostType">
                 <option>1</option>
@@ -15,24 +17,31 @@
                 <option>5</option>
             </select>
 
+    
+    <!-- Article Content -->
         <h4>Upload Content</h4>
         <textarea id="createPostTextBox" rows="20" cols="130"></textarea>
 
+    <!-- Tag article -->
         <h4>Select Tags</h4>
         <?php
-        $sql = "SELECT * FROM omoore94_animerooms.cmstags";        
-        $result = $conn->query($sql);
-        
-        while($row = $result->fetch_array()){
-            print_r($row);
-        }
-        
+        $FetchTags = "SELECT * FROM omoore94_animerooms.cmstags";        
+        $FetchTagsResult = mysqli_query($conn, $FetchTags);
         ?>
         <div class="form-check" id="CreatePostSelectTags">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">Default checkbox</label>
+        <?php
+        while($row = mysqli_fetch_assoc($FetchTagsResult)){
+        ?>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="<?= $row['TagName']; ?>">
+            <label class="form-check-label"><?= $row['TagName']; ?></label>
+        </div>
+        <?php
+        }
+        ?>
         </div>
 
+    <!-- Add Images to article -->
         <h4>Upload Images</h4>
         <input type="file" name="img" multiple>
         <br>
