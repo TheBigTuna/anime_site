@@ -14,6 +14,7 @@
             // Start the session
              session_start();
              include("resources/connection.php"); 
+             include("functions.php"); 
             //  include("/anime_site/api_config.php"); 
             ?>
             <!-- Global site tag (gtag.js) - Google Analytics -->
