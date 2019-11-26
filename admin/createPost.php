@@ -10,8 +10,8 @@
     <!-- Select The Type of Post -->
         <h4>Post Type</h4>
             <select class="form-control" id="CreatePostSelectPostType">
-                <option>1</option>
-                <option>2</option>
+                <option>Article</option>
+                <option>Gallery</option>
                 <option>3</option>
                 <option>4</option>
                 <option>5</option>
@@ -19,8 +19,8 @@
 
     
     <!-- Article Content -->
-        <h4>Upload Content</h4>
-        <textarea id="createPostTextBox" rows="20" cols="130"></textarea>
+        <h4>Upload Text/Content</h4>
+        <textarea id="createPostTextBox" rows="15" cols="130"></textarea>
 
     <!-- Tag article -->
         <h4>Select Tags</h4>

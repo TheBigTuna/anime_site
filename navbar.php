@@ -10,8 +10,12 @@
             <script src="/anime_site/script/jquery-3.4.1.js"></script>
             <script src="/anime_site/script/bootstrap.js"></script>
 			      <script src="/anime_site/script/main.js"></script>
-            <?php include("resources/connection.php"); ?>
-            <!-- <?php include("/anime_site/api_config.php"); ?> -->
+            <?php
+            // Start the session
+             session_start();
+             include("resources/connection.php"); 
+            //  include("/anime_site/api_config.php"); 
+            ?>
             <!-- Global site tag (gtag.js) - Google Analytics -->
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152462977-1"></script>
           <script>
@@ -47,9 +51,15 @@
                 <li class="nav-item">
                   <a class="nav-link navMenuLink" href="#">contact</a>
                 </li>
+                <?php
+                if(isset($_SESSION['IsAdmin'])){
+                ?>
                 <li class="nav-item">
                   <a class="nav-link navMenuLink" href="/anime_site/admin/index.php">Admin</a>
                 </li>
+                <?php
+                }
+                ?>
               </ul>
             </div>
           </nav>
