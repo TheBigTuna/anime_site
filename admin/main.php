@@ -7,6 +7,9 @@
 
 <div class="container">
     <a href="createPost.php">
-        <button type="button" class="btn btn-primary btn-block adminBtn">Create Post</button>
+        <button type="button" class="btn btn-dark btn-block adminBtn mb-2">Create Post</button>
+    </a>
+    <a href="ManagePost.php">
+        <button type="button" class="btn btn-dark btn-block adminBtn mt-2">Manage Post</button>
     </a>
 </div>
