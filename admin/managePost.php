@@ -5,4 +5,3 @@
  verifyAdmin();
 ?>
 
-Manage

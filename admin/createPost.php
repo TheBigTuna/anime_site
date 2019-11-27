@@ -6,13 +6,14 @@ include('../navbar.php');
 ?>
 
 <div class="container">
+    <form action="insertPost.php" method="POST">
     <!-- Enter Title -->
         <h4>Enter Text</h4>
-        <input type="text" id="createPostEnterTitle" class="form-control" placeholder="Enter Title">
+        <input type="text" id="createPostEnterTitle" name="Title" class="form-control" placeholder="Enter Title">
 
     <!-- Select The Type of Post -->
         <h4>Post Type</h4>
-            <select class="form-control" id="CreatePostSelectPostType">
+            <select class="form-control" name="PostType" id="CreatePostSelectPostType">
                 <option selected disabled></option>
                 <option value="Article1">Article Type 1</option>
                 <option value="Article2">Article Type 2</option>
@@ -25,10 +26,11 @@ include('../navbar.php');
     
     <!-- Article Content -->
         <h4>Upload Text/Content</h4>
-        <textarea id="createPostTextBox" rows="15" cols="130"></textarea>
+        <textarea id="createPostTextBox" name="PostText" rows="15" cols="130"></textarea>
 
     <!-- Tag article -->
         <h4>Select Tags</h4>
+        <small>Select up to 5 tags</small>
         <?php
         $FetchTags = "SELECT * FROM omoore94_animerooms.cmstags";        
         $FetchTagsResult = mysqli_query($conn, $FetchTags);
@@ -38,7 +40,7 @@ include('../navbar.php');
         while($row = mysqli_fetch_assoc($FetchTagsResult)){
         ?>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="<?= $row['TagName']; ?>">
+            <input class="form-check-input" name="Tags[]" type="checkbox" value="<?= $row['TagName']; ?>">
             <label class="form-check-label"><?= $row['TagName']; ?></label>
         </div>
         <?php
@@ -51,4 +53,5 @@ include('../navbar.php');
         <input type="file" name="img" multiple>
         <br>
         <input class="btn btn-primary mb-5 mt-5" type="submit" value="Upload">
+    </form>
 </div>
