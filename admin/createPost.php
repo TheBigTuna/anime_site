@@ -13,11 +13,13 @@ include('../navbar.php');
     <!-- Select The Type of Post -->
         <h4>Post Type</h4>
             <select class="form-control" id="CreatePostSelectPostType">
-                <option>Article</option>
-                <option>Gallery</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                <option selected disabled></option>
+                <option value="Article1">Article Type 1</option>
+                <option value="Article2">Article Type 2</option>
+                <option value="Article3">Article Type 3</option>
+                <option value="Gallery">Gallery</option>
+                <option value="Video">Video</option>
+                <option value="List">List</option>
             </select>
 
     
