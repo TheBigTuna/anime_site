@@ -8,8 +8,13 @@ include('../navbar.php');
 <div class="container">
     <form action="insertPost.php" method="POST">
     <!-- Enter Title -->
-        <h4>Enter Text</h4>
+        <h4>Enter Title</h4>
         <input type="text" id="createPostEnterTitle" name="Title" class="form-control" placeholder="Enter Title">
+
+        <!-- Enter Subtitle -->
+        <h4>Enter Subtitle</h4>
+        <input type="text" id="CreatePostEnterSubtitle" name="SubTitle" class="form-control" placeholder="Enter Subtitle">
+
 
     <!-- Select The Type of Post -->
         <h4>Post Type</h4>
@@ -50,8 +55,11 @@ include('../navbar.php');
 
     <!-- Add Images to article -->
         <h4>Upload Images</h4>
-        <input type="file" name="img" multiple>
-        <br>
-        <input class="btn btn-primary mb-5 mt-5" type="submit" value="Upload">
+        <input type="file" name="Img[]" enctype="multipart/form-data">
+        <input type="file" name="Img[]" enctype="multipart/form-data">
+        <input type="file" name="Img[]" enctype="multipart/form-data">
+        <input type="file" name="Img[]" enctype="multipart/form-data">
+        <input type="file" name="Img[]" enctype="multipart/form-data">
+        <input class="btn btn-primary mb-5 mt-5" type="submit">
     </form>
 </div>

@@ -60,6 +60,10 @@
   margin: 15px 0px;
 }
 
+#CreatePostEnterSubtitle{
+  margin: 15px 0px;
+}
+
 #createPostTextBox{
   margin: 15px 0px;
   overflow-y: scroll;
