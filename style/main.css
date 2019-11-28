@@ -76,6 +76,15 @@
   overflow-y: auto;
 }
 
+#managePostTable{
+  margin-top: 30px;
+}
+
+.managePostTR:hover{
+  background-color: #E5E0FF;
+  cursor: pointer;
+}
+
 #CreatePostSelectPostType{
   margin: 15px 0px;
 }
@@ -98,8 +107,8 @@
 
 @media only screen and (max-width: 991px) {
   #navLogoImg{
-    width: 9rem;
-    height: 9rem;
+    width: 11rem;
+    height: 11rem;
     cursor: pointer;
   }
   #navImgContainer{
@@ -347,12 +356,7 @@ body {
   --------------------------------------------------------------*/
   
   /* Desktop Navigation */
-  
-  .main-nav {
-    /* Drop Down */
-    /* Deep Drop Down */
-  }
-  
+
   .main-nav,
   .main-nav * {
     margin: 0;
