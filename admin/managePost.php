@@ -71,8 +71,7 @@
             </tr>
         </tbody>
         </table>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Update</button>
-        <button type="button" class="btn btn-primary">Delete</button>
+            <div id="ModalButtonOutput"></div>
       </div>
     </div>
   </div>
@@ -91,8 +90,14 @@
         for(var i=0; i < modalInfoArray.length; i++){
             modalPostOutput += "<td>" + modalInfoArray[i] + "</td>";
         }
+        
+        var modalButtonOutput = "";
+        var updatePostUrl = 'updatePost.php?ID' + Id + '&Type=' + Type + '&Text=' + Text + '&Tag1=' + Tag1 ;
+        modalButtonOutput += "<a href=" + updatePostUrl + "><button type='button' class='btn btn-secondary'>Update</button></a>";
+        modalButtonOutput += "<button type='button' class='btn btn-danger ml-3'>Delete</button>";
 
         // Output Post Data to table
         $("#ModalPostOutput").html(modalPostOutput);
+        $("#ModalButtonOutput").html(modalButtonOutput);
     }
 </script> 
