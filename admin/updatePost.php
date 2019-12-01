@@ -6,19 +6,45 @@ include('../navbar.php');
 ?>
 
 <div class="container">
+    <table class="table" id="UpdatePostCurrentValues">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Type</th>
+                <th scope="col">Text</th>
+                <th scope="col">Tag1</th>
+                <th scope="col">Tag2</th>
+                <th scope="col">Tag3</th>
+                <th scope="col">Tag4</th>
+                <th scope="col">Tag5</th>
+                <th scope="col">Img1</th>
+                <th scope="col">Img2</th>
+                <th scope="col">Img3</th>
+                <th scope="col">Img4</th>
+                <th scope="col">Img5</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <tr id="ModalPostOutput"></tr>
+            </tr>
+        </tbody>
+    </table>
+
+
     <form action="insertPost.php" method="POST">
     <!-- Enter Title -->
         <h4>Enter Title</h4>
-        <input type="text" id="createPostEnterTitle" name="Title" class="form-control" placeholder="Enter Title">
+        <input type="text" id="UpdatePostEnterTitle" name="Title" class="form-control" placeholder="Enter Title">
 
         <!-- Enter Subtitle -->
         <h4>Enter Subtitle</h4>
-        <input type="text" id="CreatePostEnterSubtitle" name="SubTitle" class="form-control" placeholder="Enter Subtitle">
+        <input type="text" id="UpdatePostEnterSubtitle" name="SubTitle" class="form-control" placeholder="Enter Subtitle">
 
 
     <!-- Select The Type of Post -->
         <h4>Post Type</h4>
-            <select class="form-control" name="PostType" id="CreatePostSelectPostType">
+            <select class="form-control" name="PostType" id="UpdatePostSelectPostType">
                 <option selected disabled></option>
                 <option value="Article1">Article Type 1</option>
                 <option value="Article2">Article Type 2</option>
@@ -31,7 +57,7 @@ include('../navbar.php');
     
     <!-- Article Content -->
         <h4>Upload Text/Content</h4>
-        <textarea id="createPostTextBox" name="PostText" rows="15" cols="130"></textarea>
+        <textarea id="UpdatePostTextBox" name="PostText" rows="15" cols="130"></textarea>
 
     <!-- Tag article -->
         <h4>Select Tags</h4>
@@ -40,7 +66,7 @@ include('../navbar.php');
         $FetchTags = "SELECT * FROM omoore94_animerooms.cmstags";        
         $FetchTagsResult = mysqli_query($conn, $FetchTags);
         ?>
-        <div class="form-check" id="CreatePostSelectTags">
+        <div class="form-check" id="UpdatePostSelectTags">
         <?php
         while($row = mysqli_fetch_assoc($FetchTagsResult)){
         ?>
@@ -60,6 +86,6 @@ include('../navbar.php');
         <input type="file" name="Img[]" enctype="multipart/form-data">
         <input type="file" name="Img[]" enctype="multipart/form-data">
         <input type="file" name="Img[]" enctype="multipart/form-data">
-        <input class="btn btn-primary mb-5 mt-5" type="submit">
+        <btn class="btn btn-primary mb-5 mt-5">Submit</button>
     </form>
 </div>

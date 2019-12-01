@@ -60,6 +60,6 @@ include('../navbar.php');
         <input type="file" name="Img[]" enctype="multipart/form-data">
         <input type="file" name="Img[]" enctype="multipart/form-data">
         <input type="file" name="Img[]" enctype="multipart/form-data">
-        <input class="btn btn-primary mb-5 mt-5" type="submit">
+        <button class="btn btn-primary mb-5 mt-5">Submit</button>
     </form>
 </div>
