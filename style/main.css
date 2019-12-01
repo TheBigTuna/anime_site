@@ -43,10 +43,16 @@
 
 /* Admin Stylings */
 
-#InputAdminPassword{
+#InputAdminUser{
   width: 60%;
   margin: 0 auto;
   margin-top: 7em;
+}
+
+#InputAdminPassword{
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 1em;
 }
 
 #submitAdminPassword{

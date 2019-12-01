@@ -24,7 +24,7 @@
             $FetchArticlesResult = mysqli_query($conn, $FetchArticles);
             while($row = mysqli_fetch_assoc($FetchArticlesResult)){
             ?>
-                <tr class="managePostTR" onclick="openModal('<?= $row['ID']; ?>', '<?= $row['ArticleType']; ?>', '<?= $row['Text']; ?>', '<?= $row['Tag1']; ?>', '<?= $row['Tag2']; ?>', '<?= $row['Tag3']; ?>','<?= $row['Tag4']; ?>','<?= $row['Tag5']; ?>','<?= $row['Img1']; ?>','<?= $row['Img2']; ?>','<?= $row['Img3']; ?>','<?= $row['Img4']; ?>','<?= $row['Img5']; ?>')">
+                <tr class="managePostTR" onclick="openModal('<?= $row['ID']; ?>', '<?= $row['ArticleType']; ?>', '<?= $row['Tag1']; ?>', '<?= $row['Tag2']; ?>', '<?= $row['Tag3']; ?>','<?= $row['Tag4']; ?>','<?= $row['Tag5']; ?>','<?= $row['Img1']; ?>','<?= $row['Img2']; ?>','<?= $row['Img3']; ?>','<?= $row['Img4']; ?>','<?= $row['Img5']; ?>')">
                 <th><?= $row['ID']; ?></th>
                 <td><?= $row['ArticleName']; ?></td>
                 <td><?= $row['ArticleSubTitle']; ?></td>
@@ -79,11 +79,11 @@
 
 <script>
     // function to open post information  modal
-    function openModal(Id, Type, Text, Tag1, Tag2, Tag3, Tag4, Tag5, Img1, Img2, Img3, Img4, Img5){
+    function openModal(Id, Type, Tag1, Tag2, Tag3, Tag4, Tag5, Img1, Img2, Img3, Img4, Img5){
         $("#manageModalPost").modal("toggle");
         $("#manageModalPost").modal("show");
 
-        var modalInfoArray = [Id, Type, Text, Tag1, Tag2, Tag3, Tag4, Tag5, Img1, Img2, Img3, Img4, Img5];
+        var modalInfoArray = [Id, Type, Tag1, Tag2, Tag3, Tag4, Tag5, Img1, Img2, Img3, Img4, Img5];
         var modalPostOutput = "";
         
         // Concate table data to modalpostoutput variable
@@ -92,7 +92,7 @@
         }
         
         var modalButtonOutput = "";
-        var updatePostUrl = 'updatePost.php?ID' + Id + '&Type=' + Type + '&Text=' + Text + '&Tag1=' + Tag1 ;
+        var updatePostUrl = 'updatePost.php?ID' + Id + '&Type=' + Type + '&Tag1=' + Tag1 ;
         modalButtonOutput += "<a href=" + updatePostUrl + "><button type='button' class='btn btn-secondary'>Update</button></a>";
         modalButtonOutput += "<button type='button' class='btn btn-danger ml-3'>Delete</button>";
 
