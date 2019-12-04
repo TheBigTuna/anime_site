@@ -119,13 +119,19 @@
 }
 
 .ArticlePreviewTitle{
-  margin: 10px auto;
+  font-family: "Open Sans", sans-serif;
+  color: #413e66;  
 }
 
-@media  only screen and (max-width: 992px) {
-  .navMenuLink{
-    padding: 0.2em 0.1em;
-  }
+.ArticlePreviewSubTitle{
+  font-family: "Open Sans", sans-serif;
+  color: #413e66;  
+  font-size: 14px;
+}
+
+.ArticlePreviewImg{
+  max-width: 120px;
+  max-height: 120px;
 }
 
 @media  only screen and (min-width: 568px) {
@@ -145,6 +151,27 @@
 @media  only screen and (min-width: 1200px) {
   .container-fluid {
     width: 1170px;
+  }
+}
+
+@media  only screen and (max-width: 992px) {
+  .navMenuLink{
+    padding: 0.2em 0.1em;
+  }
+  .ArticlePreviewImgContainer{
+    text-align: center;
+  }
+  .ArticlePreviewImg{
+    max-width: 150px;
+    max-height: 150px;
+  }
+  .ArticlePreviewTitle{
+    text-align: center;
+    margin: 10px auto;
+  }
+  .ArticlePreviewSubTitle{
+    text-align: center;
+    margin: 10px auto;
   }
 }
 
