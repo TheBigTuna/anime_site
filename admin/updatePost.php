@@ -8,7 +8,7 @@ include('../navbar.php');
 <div class="container">
     <?php
         // Query to fetch currently available articles
-        $FetchArticles = "SELECT * FROM omoore94_animerooms.cmsarticles AS A INNER JOIN omoore94_animerooms.cmsarticlesinfo AS AI ON AI.ID = A.ID WHERE A.ID = 2 ORDER BY A.ID DESC";        
+        $FetchArticles = "SELECT * FROM omoore94_animerooms.cmsarticles AS A INNER JOIN omoore94_animerooms.cmsarticlesinfo AS AI ON AI.ID = A.ID WHERE A.ID = 1 ORDER BY A.ID DESC";        
         $FetchArticlesResult = mysqli_query($conn, $FetchArticles);
     ?>
     <h3>Current Table</h3>

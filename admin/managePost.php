@@ -52,7 +52,6 @@
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Type</th>
-                <th scope="col">Text</th>
                 <th scope="col">Tag1</th>
                 <th scope="col">Tag2</th>
                 <th scope="col">Tag3</th>
