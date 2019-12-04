@@ -118,7 +118,11 @@
   background-color: red;
 }
 
-@media  only screen and (max-width: 568px) {
+.ArticlePreviewTitle{
+  margin: 10px auto;
+}
+
+@media  only screen and (max-width: 992px) {
   .navMenuLink{
     padding: 0.2em 0.1em;
   }
@@ -128,13 +132,14 @@
   .container-fluid {
     width: 550px;
   }
-  .navMenuLink{
-    padding: 10px 15px !important;
-  }
+
 }
 @media  only screen and (min-width: 992px) {
   .container-fluid {
     width: 970px;
+  }
+  .navMenuLink{
+    padding: 10px 15px !important;
   }
 }
 @media  only screen and (min-width: 1200px) {
