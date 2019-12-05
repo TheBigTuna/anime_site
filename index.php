@@ -12,11 +12,10 @@
             $FetchArticlesResult = mysqli_query($conn, $FetchArticles);
             while($row = mysqli_fetch_assoc($FetchArticlesResult)){
         ?>
-        <div class="ArticlePreviewCard">
             <div class="row">
                 <div class="col-sm-12 col-lg-2">
                     <div class="ArticlePreviewImgContainer">
-                        <img src="images/<?= $row['Img1']; ?>" style="max-width:100%; max-height: 100%;" class="ArticlePreviewImg"> 
+                        <img src="images/<?= $row['Img1']; ?>" class="ArticlePreviewImg"> 
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-10">
@@ -30,7 +29,6 @@
                     <small><?= $row['Text']; ?></small>
                 </div>
             </div>
-        </div>
         <?php
             }
         ?>
