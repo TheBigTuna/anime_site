@@ -104,7 +104,7 @@
 }
 
 .PageContainer{
-  background-color: lightblue;
+  /* background-color: lightblue; */
   padding: 1.1em;
   margin: 0.7em 0.5em;
 }
@@ -115,7 +115,11 @@
 }
 
 .ArticlePreviewBG{
-  background-color: red;
+  /* background-color: red; */
+}
+
+.ArticlePreviewCard{
+  margin: 8px 0px;
 }
 
 .ArticlePreviewTitle{
@@ -146,6 +150,9 @@
   }
   .navMenuLink{
     padding: 10px 15px !important;
+  }
+  .ArticlePreviewBG{
+    height: 220px;
   }
 }
 @media  only screen and (min-width: 1200px) {
