@@ -130,9 +130,10 @@
 
 .ArticlePreviewTitle{
   font-family: "Open Sans", sans-serif;
-  color: #413e66;  
+  color: #0B5AA3;  
   margin: 0 0 15px 0;
   font-size: 18px;
+  font-weight: 600;
 }
 
 .ArticlePreviewSubTitle{
@@ -150,6 +151,12 @@
 .ArticlePreviewImg{
   width: 160px;
   height: 160px;
+}
+
+.ArticlePreviewInfo{
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+
 }
 
 @media only screen and (min-width: 568px) {

@@ -16,12 +16,12 @@
             <div class="row">
                 <div class="col-sm-12 col-lg-2">
                     <div class="ArticlePreviewImgContainer">
-                        <a href=""><img src="images/<?= $row['Img1']; ?>" class="ArticlePreviewImg"></a>
+                        <a href="#"><img src="images/<?= $row['Img1']; ?>" class="ArticlePreviewImg"></a>
                     </div>
                 </div>
                 <div class="col-sm-12 col-lg-10">
                     <div class="ArticlePreviewContent">
-                        <h5 class="ArticlePreviewTitle"><?= $row['ArticleName']; ?></h5>
+                        <a href="#"><h5 class="ArticlePreviewTitle"><?= $row['ArticleName']; ?></h5></a>
                         <h6 class="ArticlePreviewSubTitle"><?= $row['ArticleName']; ?></h6>
                         <?php
                             if(strlen($row['Text']) > 250){
@@ -29,6 +29,7 @@
                             }
                         ?>
                         <p class="ArticlePreviewText"><?= $row['Text']; ?></p>
+                        <p class="ArticlePreviewInfo"><?= date("F d, Y g:i A",strtotime($row['Timestamp'])); ?> by <span style="font-weight: 600;"><?= $row['User']; ?></span></p>
                     </div>
                 </div>
             </div>
