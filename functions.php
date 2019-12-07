@@ -5,4 +5,8 @@
             header('Location: /anime_site/index.php');
         }
     }
+
+    function fetchCurrentPage(){
+        $_SESSION['CurrentPage'] = "Home";
+    }
 ?>

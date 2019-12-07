@@ -103,20 +103,11 @@
   margin-bottom: 60px;
 }
 
-.PageContainer{
-  /* background-color: lightblue; */
-  padding: 1.1em;
-  margin: 0.7em 0.8em;
-}
-
 .PageContainerHeadText{
   font-weight: 600;
   font-family: "Open Sans", sans-serif;
 }
 
-.ArticlePreviewBG{
-  /* background-color: red; */
-}
 
 .ArticlePreviewCard{
   margin: 12px 0px;
@@ -231,11 +222,7 @@
 
 
 
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
+body {
     background: #fff;
     color: #444;
     font-family: "Open Sans", sans-serif;
@@ -1700,7 +1687,7 @@ html, body {
       margin-bottom: 50px;
     }
   }
-  
+/*   
   @media (max-width: 768px) {
     .back-to-top {
       bottom: 15px;
@@ -1758,7 +1745,7 @@ html, body {
       margin-left: 0;
     }
   }
-  
+   */
   @media (max-width: 574px) {
     #footer .footer-top .social-links a {
       margin-bottom: 25px;
