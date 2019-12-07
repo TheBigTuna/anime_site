@@ -1,31 +1,32 @@
 <!DOCTYPE html>
     <html lang="en">
         <head>
-        <?php
-            // Start the session
-             session_start();
-             include("resources/connection.php"); 
-             include("functions.php"); 
-            //  include("/anime_site/api_config.php"); 
-            fetchCurrentPage();
-        ?>
-            <title><?= $_SESSION['CurrentPage']; ?> - animerooms.com</title>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="icon" href="/anime_site/images/halfLogo.png">
-            <link href="/anime_site/style/bootstrap.css" rel="stylesheet">
-            <link href="/anime_site/style/main.css" rel="stylesheet">
-            <script src="/anime_site/script/jquery-3.4.1.js"></script>
-            <script src="/anime_site/script/bootstrap.js"></script>
-			      <script src="/anime_site/script/main.js"></script>
-            <!-- Global site tag (gtag.js) - Google Analytics -->
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152462977-1"></script>
-          <script>
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'UA-152462977-1');
-          </script>
+          <?php
+              // Start the session
+              session_start();
+              include("resources/connection.php"); 
+              include("functions.php"); 
+              //  include("/anime_site/api_config.php"); 
+              include("resources/pageInfo.php"); 
+          ?>
+              <title><?= $_SESSION['CurrentPage']; ?> - animerooms.com</title>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+              <meta name='description' content="">
+              <link rel="icon" href="/anime_site/images/halfLogo.png">
+              <link href="/anime_site/style/bootstrap.css" rel="stylesheet">
+              <link href="/anime_site/style/main.css" rel="stylesheet">
+              <script src="/anime_site/script/jquery-3.4.1.js"></script>
+              <script src="/anime_site/script/bootstrap.js"></script>
+              <script src="/anime_site/script/main.js"></script>
+              <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152462977-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'UA-152462977-1');
+            </script>
         </head>
     <body>
         <div class="container-fluid" id="mainPageContainer">
@@ -69,5 +70,3 @@
             </div>
           </nav>
         </div>
-    </body>
-</html>
