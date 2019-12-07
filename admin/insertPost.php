@@ -5,7 +5,7 @@
     // Post variables to be inserted into the cmsarticles table
     $Title = $_POST['Title'];
     $SubTitle = $_POST['SubTitle'];
-    $User = "omoore94";
+    $User = "octavius";
     $CurrentDate = date("Y-m-d H:i:s");
 
     // Post variables to be inserted into the cmsarticlesinfo table

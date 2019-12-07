@@ -38,20 +38,23 @@
             </div>
             <div id="navbarNav">
               <ul class="navbar-nav" id="navbarMenu">
+              <li class="nav-item">
+                  <a class="nav-link navMenuLink" href="/anime_site/index.php">Home</a>
+                </li>
                 <li class="nav-item">
                   <a class="nav-link navMenuLink" href="/anime_site/layout/lifestyle.php">lifestyle</a>
                 </li>
                 <li class="nav-item active">
                   <a class="nav-link navMenuLink active" href="/anime_site/layout/anime.php">anime</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link navMenuLink" href="#">manga</a>
-                </li>
-                <li class="nav-item">
+                </li> -->
+                <!-- <li class="nav-item">
                   <a class="nav-link navMenuLink" href="#">team</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
-                  <a class="nav-link navMenuLink" href="#">contact</a>
+                  <a class="nav-link navMenuLink" href="/anime_site/layout/contact.php">contact</a>
                 </li>
                 <?php
                 if(isset($_SESSION['IsAdmin'])){
