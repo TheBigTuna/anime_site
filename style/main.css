@@ -106,7 +106,7 @@
 .PageContainer{
   /* background-color: lightblue; */
   padding: 1.1em;
-  margin: 0.7em 0.5em;
+  margin: 0.7em 0.8em;
 }
 
 .PageContainerHeadText{
@@ -119,17 +119,31 @@
 }
 
 .ArticlePreviewCard{
-  margin: 8px 0px;
+  margin: 12px 0px;
+}
+
+.ArticlePreviewContent{
+  padding: 4px 20px;
+  height: 100%;
+  border-bottom: #ededed 1px solid;
 }
 
 .ArticlePreviewTitle{
   font-family: "Open Sans", sans-serif;
   color: #413e66;  
+  margin: 0 0 15px 0;
+  font-size: 18px;
 }
 
 .ArticlePreviewSubTitle{
   font-family: "Open Sans", sans-serif;
   color: #413e66;  
+  margin: 0 0 15px 0;
+  font-size: 16px;
+}
+
+.ArticlePreviewText{
+  margin: 0 0 15px 0;
   font-size: 14px;
 }
 
@@ -138,13 +152,19 @@
   height: 160px;
 }
 
-@media  only screen and (min-width: 568px) {
+@media only screen and (min-width: 568px) {
   .container-fluid {
     width: 550px;
   }
-
 }
-@media  only screen and (min-width: 992px) {
+@media only screen and (max-width: 568px){
+  .ArticlePreviewContent{
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (min-width: 992px) {
   .container-fluid {
     width: 970px;
   }
@@ -202,7 +222,13 @@
 
 
 
-body {
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
     background: #fff;
     color: #444;
     font-family: "Open Sans", sans-serif;
