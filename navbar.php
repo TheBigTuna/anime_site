@@ -12,7 +12,8 @@
               <title><?= $_SESSION['CurrentPage']; ?> - animerooms.com</title>
               <meta charset="UTF-8">
               <meta name="viewport" content="width=device-width, initial-scale=1">
-              <meta name='description' content="">
+              <meta name='description' content="<?= $_SESSION['CurrentSubtitle']; ?>">            
+              <meta name="author" content="<?= $_SESSION['ArticleAuthor']; ?>">
               <link rel="icon" href="/anime_site/images/halfLogo.png">
               <link href="/anime_site/style/bootstrap.css" rel="stylesheet">
               <link href="/anime_site/style/main.css" rel="stylesheet">
@@ -48,9 +49,9 @@
                 <li class="nav-item active">
                   <a class="nav-link navMenuLink active" href="/anime_site/layout/anime.php">anime</a>
                 </li>
-                <!-- <li class="nav-item">
-                  <a class="nav-link navMenuLink" href="#">manga</a>
-                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link navMenuLink" href="/anime_site/layout/manga.php">manga</a>
+                </li>
                 <!-- <li class="nav-item">
                   <a class="nav-link navMenuLink" href="#">team</a>
                 </li> -->
@@ -70,3 +71,5 @@
             </div>
           </nav>
         </div>
+      </body>
+    </html>
