@@ -14,6 +14,7 @@
                         <h2 class="ArticlePageTitle"><?= $row['ArticleName']; ?></h2>
                     </div>
                     <h6 class="ArticlePageAuthor">By <span style="color: #0B5AA3;"><?= $row['User']; ?></span></h6>
+                    <h6><?= date("F d, Y g:i A",strtotime($row['Timestamp'])); ?></h6>
                     <?php print_r($row); ?>
                 </div>
             <?php
