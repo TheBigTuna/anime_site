@@ -15,6 +15,20 @@
                     </div>
                     <h6 class="ArticlePageAuthor">By <span style="color: #0B5AA3;"><?= $row['User']; ?></span></h6>
                     <h6><?= date("F d, Y g:i A",strtotime($row['Timestamp'])); ?></h6>
+                    <div id="ArticleHeaderSection">
+                        <div class="row">
+                            <div class="col-sm-12 col-lg-8">
+                                <div class="ArticleMainPictureBG">
+                                    <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>"><img src="images/<?= $row['Img1']; ?>" style="height: 100%; width: 100%; float: right;"></a>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-lg-4">
+                                <div class="ArticleSuggestedArticlesBG">
+                                    Test
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <?php print_r($row); ?>
                 </div>
             <?php
