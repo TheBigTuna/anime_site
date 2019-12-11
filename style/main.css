@@ -190,10 +190,20 @@ body {
   margin: 0px 0px 20px 0px;
 }
 
-.ArticleRecentImages{
+.ArticleRecentImagesContainer{
   width: 100%;
   height: 100%;
 }
+
+.ArticleRecentTitleContainer{
+  width: 100%;
+  height: 100%;
+}
+
+.ArticleRecentTitle{
+  text-align: center;
+}
+
 
 @media only screen and (min-width: 568px) {
   .container-fluid {

@@ -39,16 +39,20 @@
                                             while($row = mysqli_fetch_assoc($RecentArticlesResult)){
                                                 // print_r($row);
                                         ?>
-                                            <div class="row">
-                                                <div class="col-sm-12 col-md-4">
-                                                    <div class="ArticleRecentImages">
-                                                        <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>"><img src="images/<?= $row['Img1']; ?>" style="height: 90px; width: 100%; float: right;"></a>
+                                            <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>">
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-5">
+                                                        <div class="ArticleRecentImagesContainer">
+                                                            <img src="images/<?= $row['Img1']; ?>" style="height: 90px; width: 100%; float: right;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-7">
+                                                        <div class="ArticleRecentTitleContainer">
+                                                            <h6 class="ArticleRecentTitle"><?= $row['ArticleName']; ?></h6>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-sm-12 col-md-8">
-                                                    Ex 2
-                                                </div>
-                                            </div>
+                                            </a>
                                         <?php
                                             }
                                         ?>
