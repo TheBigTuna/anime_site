@@ -32,6 +32,7 @@ else if(strpos($_SERVER['REQUEST_URI'],"/article.php")){
     }
 }
 
+// If recent articles have not been stored create a recent articles variable and store the five most recent articles
 if(!isset($_SESSION['RecentArticles'])){
     $_SESSION['RecentArticles'] = array();
     // Query to fetch currently available articles

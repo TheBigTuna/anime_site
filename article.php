@@ -29,19 +29,18 @@
                                 </div>
                             </div>
                             <div class="col-sm-12 col-lg-4">
-                                <div class="ArticleSuggestedArticlesBG" style="background-color: lightblue;">
+                                <div class="ArticleSuggestedArticlesBG">
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <h5 class="ArticleRecentArticlesTextTop">Recent Articles</h5>
                                         <?php
                                             foreach($_SESSION['RecentArticles'] as $row){
-
                                         ?>
                                             <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>">
-                                                <div class="row">
+                                                <div class="row" style="margin: 20px 0px;">
                                                     <div class="col-sm-12 col-md-5">
                                                         <div class="ArticleRecentImagesContainer">
-                                                            <img src="images/<?= $row['Img1']; ?>" style="height: 90px; width: 100%; float: right;">
+                                                            <img src="images/<?= $row['Img1']; ?>" style="height: 90px; width: 100%; float: right; object-fit: cover;">
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-12 col-md-7">
