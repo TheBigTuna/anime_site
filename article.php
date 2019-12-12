@@ -34,10 +34,8 @@
                                         <div class="col-sm-12">
                                             <h5 class="ArticleRecentArticlesTextTop">Recent Articles</h5>
                                         <?php
-                                            $RecentArticles = "SELECT * FROM omoore94_animerooms.cmsarticles AS A INNER JOIN omoore94_animerooms.cmsarticlesinfo AS AI ON AI.ID = A.ID ORDER BY A.ID DESC LIMIT 5";        
-                                            $RecentArticlesResult = mysqli_query($conn, $RecentArticles);
-                                            while($row = mysqli_fetch_assoc($RecentArticlesResult)){
-                                                // print_r($row);
+                                            foreach($_SESSION['RecentArticles'] as $row){
+
                                         ?>
                                             <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>">
                                                 <div class="row">
