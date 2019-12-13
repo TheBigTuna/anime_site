@@ -26,7 +26,7 @@
                             <div class="col-sm-12 col-lg-8">
                                 <!-- First picture for the current article -->
                                 <div class="ArticleMainPictureBG">
-                                    <a href="/anime_site/article.php?ID=<?= $ArticleRow[0]['ID']; ?>"><img src="images/<?= $ArticleRow[0]['Img1']; ?>" style="height: 450px; width: 100%; object-fit: cover; float: right;"></a>
+                                    <img src="images/<?= $ArticleRow[0]['Img1']; ?>" style="height: 450px; width: 100%; object-fit: cover; float: right;">
                                 </div>
                             </div>
                             <div class="col-sm-12 col-lg-4">
@@ -76,16 +76,13 @@
                                         </ul>
                                     </div>
                                     <div class="ArticleText">
-                                        <p><?= $ArticleRow[0]['Text']; ?></p>
+                                        <p><?php SplitArticle($ArticleRow[0]['Text'], '1'); ?></p>
                                     </div>
-                                    <?php
-                                        print_r($ArticleRow[0]);
-                                    ?>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-lg-4">
                                 <div class="ArticleSidePanel">
-                                    <h5>TEST</h5>
+                                    <!-- <h5>TEST</h5> -->
                                 </div>
                             </div>
                         </div>
