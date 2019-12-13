@@ -205,6 +205,22 @@ body {
   margin: 10px 0px 0px 0px;
 }
 
+.ArticleListTags ul{
+  list-style: none;
+}
+.ArticleListTags li{
+  display: inline;
+  font-size: 13px;
+  color: #0B5AA3;
+  transition: 0.3s;
+}
+
+.ArticleListTags li:hover{
+  font-size: 16px;
+  font-weight: 600;
+}
+	
+
 
 @media only screen and (min-width: 568px) {
   .container-fluid {

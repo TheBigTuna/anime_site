@@ -24,6 +24,7 @@
                     <div id="ArticleHeaderSection">
                         <div class="row">
                             <div class="col-sm-12 col-lg-8">
+                                <!-- First picture for the current article -->
                                 <div class="ArticleMainPictureBG">
                                     <a href="/anime_site/article.php?ID=<?= $ArticleRow[0]['ID']; ?>"><img src="images/<?= $ArticleRow[0]['Img1']; ?>" style="height: 450px; width: 100%; object-fit: cover; float: right;"></a>
                                 </div>
@@ -34,16 +35,19 @@
                                         <div class="col-sm-12">
                                             <h5 class="ArticleRecentArticlesTextTop">Recent Articles</h5>
                                         <?php
+                                            // Loop throught the recent articles session array
                                             foreach($_SESSION['RecentArticles'] as $row){
                                         ?>
                                             <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>">
                                                 <div class="row" style="margin: 20px 0px;">
                                                     <div class="col-sm-12 col-md-5">
+                                                        <!-- Recent Article Images -->
                                                         <div class="ArticleRecentImagesContainer">
                                                             <img src="images/<?= $row['Img1']; ?>" style="height: 90px; width: 100%; float: right; object-fit: cover;">
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-12 col-md-7">
+                                                        <!-- Recent Article Titles -->
                                                         <div class="ArticleRecentTitleContainer">
                                                             <h6 class="ArticleRecentTitle"><?= $row['ArticleName']; ?></h6>
                                                         </div>
@@ -60,8 +64,23 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-12 col-lg-8">
-                                <div class="ArticleBodyContainer" style="background-color: lightblue;">
-                                    <h5>Test 1234</h5>
+                                <div class="ArticleBodyContainer">
+                                    <!-- List tagged categories for the current article -->
+                                    <div class="ArticleListTags">
+                                        <ul>
+                                            <a href="#"><li><?= $ArticleRow[0]['Tag1']; ?></li></a>
+                                            <a href="#"><li><?= $ArticleRow[0]['Tag2']; ?></li></a>
+                                            <a href="#"><li><?= $ArticleRow[0]['Tag3']; ?></li></a>
+                                            <a href="#"><li><?= $ArticleRow[0]['Tag4']; ?></li></a>
+                                            <a href="#"><li><?= $ArticleRow[0]['Tag5']; ?></li></a>
+                                        </ul>
+                                    </div>
+                                    <div class="ArticleText">
+                                        <p><?= $ArticleRow[0]['Text']; ?></p>
+                                    </div>
+                                    <?php
+                                        print_r($ArticleRow[0]);
+                                    ?>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-lg-4">
