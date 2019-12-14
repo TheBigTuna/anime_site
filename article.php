@@ -5,7 +5,7 @@
     <div class="container">
         <?php
             // Query to fetch currently available articles
-            $FetchArticles = "SELECT * FROM omoore94_animerooms.cmsarticles AS A INNER JOIN omoore94_animerooms.cmsarticlesinfo AS AI ON AI.ID = A.ID WHERE A.ID = 2 ORDER BY A.ID DESC";        
+            $FetchArticles = "SELECT * FROM omoore94_animerooms.cmsarticles AS A INNER JOIN omoore94_animerooms.cmsarticlesinfo AS AI ON AI.ID = A.ID WHERE A.ID = 5 ORDER BY A.ID DESC";        
             $FetchArticlesResult = mysqli_query($conn, $FetchArticles);
             $ArticleRow = array();
             while($row = mysqli_fetch_assoc($FetchArticlesResult)){
@@ -76,7 +76,7 @@
                                         </ul>
                                     </div>
                                     <div class="ArticleText">
-                                        <p><?php SplitArticle($ArticleRow[0]['Text'], '1'); ?></p>
+                                        <p><?= SplitArticle($ArticleRow[0]['Text'], '1'); ?></p>
                                     </div>
                                 </div>
                             </div>
