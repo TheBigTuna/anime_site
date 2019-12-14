@@ -29,7 +29,7 @@
                             <div class="col-sm-12 col-lg-8">
                                 <!-- First picture for the current article -->
                                 <div class="ArticleMainPictureBG">
-                                    <img src="images/<?= $ArticleRow[0]['Img1']; ?>" style="height: 450px; width: 100%; object-fit: cover; float: right;">
+                                    <img src="images/<?= $ArticleRow[0]['Img1']; ?>" class="ArticleImg" style="height: 450px; width: 100%; object-fit: cover; float: right;">
                                 </div>
                                 <!-- List tagged categories for the current article -->
                                 <div class="ArticleListTags">
