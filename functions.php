@@ -15,25 +15,26 @@
         
         switch ($Type){
             case "1":
-                echo "Your favorite color is red!";
+                if(strpos($Article, "!Image2!") == true){
+                    $Article = str_replace( "!Image2!", "<img src='images/" . $Images[1] . "'style='height: 280px; width: 60%; object-fit: cover;'>", $Article);
+                }
+                if(strpos($Article, "!Image3!") == true){
+                    $Article = str_replace( "!Image3!", "<img src='images/" . $Images[2] . "'style='height: 250px; width: 120px; float: right; object-fit: cover;'>", $Article);
+                }
+                if(strpos($Article, "!Image4!") == true){
+                    $Article = str_replace( "!Image4!", "<img src='images/" . $Images[2] . "'style='height: 200px; width: 80%; display: block; margin: 0 auto; object-fit: cover;'>", $Article);
+                }
                 break;
             case "2":
-                echo "Your favorite color is blue!";
                 break;
             case "3":
-                echo "Your favorite color is green!";
                 break;
             case "4":
-                echo "Your favorite color is green!";
                 break;
             case "5":
-                echo "Your favorite color is green!";
                 break;
             case "6":
-                echo "Your favorite color is green!";
                 break;
-            default:
-                echo "Your favorite color is neither red, blue, nor green!";
         }
 
         echo $Article;

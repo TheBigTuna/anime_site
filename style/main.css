@@ -1,4 +1,3 @@
-
 html {
   margin: 0px;
   min-height: 100% !important;
@@ -229,9 +228,15 @@ body {
   font-size: 15px;
   font-family: "Open Sans", sans-serif;
 }
+
+.footerBackground{
+  background-color: red;
+}
+
+.FooterNewsletterNavbar{
+  
+}
 	
-
-
 @media only screen and (min-width: 568px) {
   .container-fluid {
     width: 550px;
