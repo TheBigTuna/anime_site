@@ -14,6 +14,7 @@
             $_SESSION['CurrentPage'] = $ArticleRow[0]['ArticleName'];
             $_SESSION['CurrentSubtitle'] = $ArticleRow[0]['ArticleSubTitle'];
             $_SESSION['ArticleAuthor'] = $ArticleRow[0]['User'];
+            $ImageArray = array($ArticleRow[0]['Img1'], $ArticleRow[0]['Img2'], $ArticleRow[0]['Img3'],$ArticleRow[0]['Img4'],$ArticleRow[0]['Img5'],);
         ?>
                 <div class="ArticlePageBG">
                     <!-- Article Title -->
@@ -49,7 +50,7 @@
                                                 <h6 class="ArticleSubTitle"><?= $ArticleRow[0]['ArticleSubTitle']; ?></h6>
                                             </div>
                                             <div class="ArticleTextBg">
-                                                <p id="ArticleText"><?= SplitArticle($ArticleRow[0]['Text'], '1'); ?></p>
+                                                <p id="ArticleText"><?php SplitArticle($ArticleRow[0]['Text'], $ArticleRow[0]['ArticleType'], $ImageArray); ?></p>
                                             </div>
                                         </div>
                                     </div>

@@ -20,12 +20,12 @@ include('../navbar.php');
         <h4>Post Type</h4>
             <select class="form-control" name="PostType" id="CreatePostSelectPostType">
                 <option selected disabled></option>
-                <option value="Article1">Article Type 1</option>
-                <option value="Article2">Article Type 2</option>
-                <option value="Article3">Article Type 3</option>
-                <option value="Gallery">Gallery</option>
-                <option value="Video">Video</option>
-                <option value="List">List</option>
+                <option value="1">Article Type 1</option>
+                <option value="2">Article Type 2</option>
+                <option value="3">Article Type 3</option>
+                <option value="4">Gallery</option>
+                <option value="5">Video</option>
+                <option value="6">List</option>
             </select>
 
     
