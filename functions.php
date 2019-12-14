@@ -12,7 +12,7 @@
         $Article = str_replace( "\n", '<br />' . str_repeat('&nbsp;', 5), $Article);
         // Adds indentation for new paragraphs
         $Article = str_replace( "\n", str_repeat('&nbsp;', 5), $Article);
-        
+
         return $Article;
     }
 ?>

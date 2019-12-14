@@ -11,7 +11,10 @@
             while($row = mysqli_fetch_assoc($FetchArticlesResult)){
                 array_push($ArticleRow, $row);
             }
-            ?>
+            $_SESSION['CurrentPage'] = $ArticleRow[0]['ArticleName'];
+            $_SESSION['CurrentSubtitle'] = $ArticleRow[0]['ArticleSubTitle'];
+            $_SESSION['ArticleAuthor'] = $ArticleRow[0]['User'];
+        ?>
                 <div class="ArticlePageBG">
                     <!-- Article Title -->
                     <div class="ArticlePageTitleBG">
@@ -21,13 +24,37 @@
                     <h6 class="ArticlePageAuthor">By <span style="color: #0B5AA3;"><?= $ArticleRow[0]['User']; ?></span></h6>
                     <!-- Timestamp from when the article was created -->
                     <h6 class="ArticlePageTimestamp"><?= date("F d, Y g:i A",strtotime($ArticleRow[0]['Timestamp'])); ?></h6>
-                    <div id="ArticleHeaderSection">
+                    <div id="ArticleSection">
                         <div class="row">
                             <div class="col-sm-12 col-lg-8">
                                 <!-- First picture for the current article -->
                                 <div class="ArticleMainPictureBG">
                                     <img src="images/<?= $ArticleRow[0]['Img1']; ?>" style="height: 450px; width: 100%; object-fit: cover; float: right;">
                                 </div>
+                                <!-- List tagged categories for the current article -->
+                                <div class="ArticleListTags">
+                                    <ul>
+                                        <a href="#"><li><?= $ArticleRow[0]['Tag1']; ?></li></a>
+                                        <a href="#"><li><?= $ArticleRow[0]['Tag2']; ?></li></a>
+                                        <a href="#"><li><?= $ArticleRow[0]['Tag3']; ?></li></a>
+                                        <a href="#"><li><?= $ArticleRow[0]['Tag4']; ?></li></a>
+                                        <a href="#"><li><?= $ArticleRow[0]['Tag5']; ?></li></a>
+                                    </ul>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-sm-12 col-lg-12">
+                                        <div class="ArticleBodyContainer">
+                                            <div class="ArticleSubTitleBg">
+                                                <h6 class="ArticleSubTitle"><?= $ArticleRow[0]['ArticleSubTitle']; ?></h6>
+                                            </div>
+                                            <div class="ArticleTextBg">
+                                                <p id="ArticleText"><?= SplitArticle($ArticleRow[0]['Text'], '1'); ?></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                             <div class="col-sm-12 col-lg-4">
                                 <div class="ArticleSuggestedArticlesBG">
@@ -59,30 +86,6 @@
                                         ?>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12 col-lg-8">
-                                <div class="ArticleBodyContainer">
-                                    <!-- List tagged categories for the current article -->
-                                    <div class="ArticleListTags">
-                                        <ul>
-                                            <a href="#"><li><?= $ArticleRow[0]['Tag1']; ?></li></a>
-                                            <a href="#"><li><?= $ArticleRow[0]['Tag2']; ?></li></a>
-                                            <a href="#"><li><?= $ArticleRow[0]['Tag3']; ?></li></a>
-                                            <a href="#"><li><?= $ArticleRow[0]['Tag4']; ?></li></a>
-                                            <a href="#"><li><?= $ArticleRow[0]['Tag5']; ?></li></a>
-                                        </ul>
-                                    </div>
-                                    <div class="ArticleText">
-                                        <p><?= SplitArticle($ArticleRow[0]['Text'], '1'); ?></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 col-lg-4">
-                                <div class="ArticleSidePanel">
-                                    <!-- <h5>TEST</h5> -->
                                 </div>
                             </div>
                         </div>

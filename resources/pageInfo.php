@@ -20,17 +20,6 @@ else if(strpos($_SERVER['REQUEST_URI'],"/anime.php")){
 else if(strpos($_SERVER['REQUEST_URI'],"/manga.php")){
     $_SESSION['CurrentPage'] = "Manga";
 }
-else if(strpos($_SERVER['REQUEST_URI'],"/article.php")){
-    // Query to fetch currently The selected articles Title
-    $FetchArticleTitle = "SELECT ArticleName, ArticleSubTitle, User FROM omoore94_animerooms.cmsarticles AS A INNER JOIN omoore94_animerooms.cmsarticlesinfo AS AI ON AI.ID = A.ID WHERE AI.ID = 4 ORDER BY A.ID DESC";        
-    $FetchArticleTitleResult = mysqli_query($conn, $FetchArticleTitle);
-    while($row = mysqli_fetch_assoc($FetchArticleTitleResult)){
-        // Grabs the title of the article
-        $_SESSION['CurrentPage'] = $row['ArticleName'];
-        $_SESSION['CurrentSubtitle'] = $row['ArticleSubTitle'];
-        $_SESSION['ArticleAuthor'] = $row['User'];
-    }
-}
 
 // If recent articles have not been stored create a recent articles variable and store the five most recent articles
 if(!isset($_SESSION['RecentArticles'])){
