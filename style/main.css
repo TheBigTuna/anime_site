@@ -227,15 +227,33 @@ body {
 #ArticleText{
   font-size: 15px;
   font-family: "Open Sans", sans-serif;
+  line-height: 2;
 }
 
 .AboutBG{
   padding: 30px;
 }
 
+.AboutIntro{
+  font-weight: 600;
+  margin: 0px 0px 20px 0px;
+}
+
+.AboutTextContainer{
+  padding: 30px;
+}
+
+.AboutOpener{
+  font-size: 17px;
+  margin: 0px 0px 20px 0px;
+
+}
 .AboutText{
   font-size: 15px;
+  text-indent: 10px;
   font-family: "Open Sans", sans-serif;
+  padding: 0px 20px 0px 20px;
+  line-height: 2;
 }
 
 .ContactBG{
