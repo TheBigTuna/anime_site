@@ -229,6 +229,15 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+.AboutBG{
+  padding: 30px;
+}
+
+.AboutText{
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+}
+
 .ContactBG{
   padding: 30px;
 }
@@ -238,7 +247,7 @@ body {
   margin: 0 0 15px 0;
   font-size: 16px;
   text-align: center;
-  display: blockd;
+  display: block;
 }
 
 .ContactEmail{

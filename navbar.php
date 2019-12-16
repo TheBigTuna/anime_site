@@ -49,12 +49,12 @@
                 <li class="nav-item active">
                   <a class="nav-link navMenuLink active" href="/anime_site/layout/anime.php">anime</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link navMenuLink" href="/anime_site/layout/manga.php">manga</a>
-                </li>
                 <!-- <li class="nav-item">
-                  <a class="nav-link navMenuLink" href="#">team</a>
+                  <a class="nav-link navMenuLink" href="/anime_site/layout/manga.php">manga</a>
                 </li> -->
+                <li class="nav-item">
+                  <a class="nav-link navMenuLink" href="/anime_site/layout/about.php">about</a>
+                </li>
                 <li class="nav-item">
                   <a class="nav-link navMenuLink" href="/anime_site/layout/contact.php">contact</a>
                 </li>
