@@ -229,6 +229,26 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+.ContactBG{
+  padding: 30px;
+}
+
+.ContactText{
+  font-family: "Open Sans", sans-serif;
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  text-align: center;
+  display: blockd;
+}
+
+.ContactEmail{
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin: 10px 0px;
+  display: block;
+}
+
 /* .footerBackground{
   background-color: red;
 } */

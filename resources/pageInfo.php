@@ -25,7 +25,7 @@ else if(strpos($_SERVER['REQUEST_URI'],"/manga.php")){
 if(!isset($_SESSION['RecentArticles'])){
     $_SESSION['RecentArticles'] = array();
     // Query to fetch currently available articles
-    $FetchArticles = "SELECT * FROM omoore94_animerooms.cmsarticles AS A INNER JOIN omoore94_animerooms.cmsarticlesinfo AS AI ON AI.ID = A.ID ORDER BY A.ID DESC LIMIT 5";        
+    $FetchArticles = "SELECT * FROM omoore94_animerooms.cmsarticles AS A INNER JOIN omoore94_animerooms.cmsarticlesinfo AS AI ON AI.ID = A.ID ORDER BY A.ID DESC LIMIT 10";        
     $FetchArticlesResult = mysqli_query($conn, $FetchArticles);
     while($row = mysqli_fetch_assoc($FetchArticlesResult)){
         array_push($_SESSION['RecentArticles'], $row);
