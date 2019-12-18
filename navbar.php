@@ -15,6 +15,7 @@
               <meta name='description' content="<?= $_SESSION['CurrentSubtitle']; ?>">            
               <meta name="author" content="<?= $_SESSION['ArticleAuthor']; ?>">
               <link rel="icon" href="/anime_site/images/halfLogo.png">
+              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
               <link href="/anime_site/style/bootstrap.css" rel="stylesheet">
               <link href="/anime_site/style/main.css" rel="stylesheet">
               <script src="/anime_site/script/jquery-3.4.1.js"></script>
@@ -53,7 +54,7 @@
                   <a class="nav-link navMenuLink" href="/anime_site/layout/manga.php">manga</a>
                 </li> -->
                 <li class="nav-item">
-                  <a class="nav-link navMenuLink" href="/anime_site/layout/about.php">about</a>
+                  <!-- <a class="nav-link navMenuLink" href="/anime_site/layout/about.php">about</a> -->
                 </li>
                 <li class="nav-item">
                   <a class="nav-link navMenuLink" href="/anime_site/layout/contact.php">contact</a>
