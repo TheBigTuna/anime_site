@@ -34,4 +34,18 @@ if(!isset($_SESSION['RecentArticles'])){
         array_push($_SESSION['RecentArticles'], $row);
     }
 }
+
+function createSlug($Url,$Var){
+    $Url = strtolower($Url);
+    $Url = substr($Url, 0, strrpos($Url, '?'));
+    $Url .= "/Article";
+    $Url .= "/" . $Var['ID'];
+    $Url .= "/" . $Var['Title'];
+    $Url = str_replace("_", "-", $Url);
+    $Url = str_replace(" ", "-", $Url);
+
+    print_r($Var);
+    return $Url;
+} 
+echo createSlug($_SERVER['REQUEST_URI'],$_GET);
 ?>
