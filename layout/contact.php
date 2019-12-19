@@ -4,7 +4,7 @@
     <div class="ContactBG">
         <h5 class="ContactText">If you would like to contact me for business inquires, website/artcle suggestions or feedback, feel free to contact me at: <br>
         <span class="ContactEmail">animeroomsus@gmail.com</span></h5>
-        <a href ="https://twitter.com/animerooms" target="_blank"><i class="fa fa-twitter ContactIcon"></i></a>
-        <a href ="https://www.instagram.com/animerooms_us/" target="_blank"><i class="fa fa-instagram ContactIcon"></i></a>
+        <a href ="https://twitter.com/animerooms" style="text-decoration: none;" target="_blank"><i style="color: #1da1f2; "class="fa fa-twitter ContactIcon"></i></a>
+        <a href ="https://www.instagram.com/animerooms_us/" style="text-decoration: none;" target="_blank"><i class="fa fa-instagram ContactIcon" style="color: red;"></i></a>
     </div>
 </div>

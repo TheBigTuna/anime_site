@@ -23,6 +23,9 @@ else if(strpos($_SERVER['REQUEST_URI'],"/manga.php")){
 else if(strpos($_SERVER['REQUEST_URI'],"/about.php")){
     $_SESSION['CurrentPage'] = "About";
 }
+else if(strpos($_SERVER['REQUEST_URI'],"/article.php")){
+    $_SESSION['CurrentPage'] = "Article";
+}
 
 // If recent articles have not been stored create a recent articles variable and store the five most recent articles
 if(!isset($_SESSION['RecentArticles'])){
@@ -36,16 +39,24 @@ if(!isset($_SESSION['RecentArticles'])){
 }
 
 function createSlug($Url,$Var){
-    $Url = strtolower($Url);
-    $Url = substr($Url, 0, strrpos($Url, '?'));
-    $Url .= "/Article";
-    $Url .= "/" . $Var['ID'];
-    $Url .= "/" . $Var['Title'];
-    $Url = str_replace("_", "-", $Url);
-    $Url = str_replace(" ", "-", $Url);
-
-    print_r($Var);
+    if(strpos($_SERVER['REQUEST_URI'],"/article.php")){
+        $Url = strtolower($Url);
+        $Url = substr($Url, 0, strrpos($Url, '?'));
+        $Url .= "/Article";
+        $Url .= "/" . $Var['ID'];
+        $Url .= "/" . $Var['Title'];
+        $Url = str_replace("_", "-", $Url);
+        $Url = str_replace("#", "", $Url);
+        $Url = str_replace("+", "", $Url);
+        $Url = str_replace(">", "", $Url);
+        $Url = str_replace("<", "", $Url);
+        $Url = str_replace("(", "", $Url);
+        $Url = str_replace(")", "", $Url);
+        $Url = str_replace("=", "", $Url); 
+        $Url = str_replace(" ", "-", $Url);
+    }
     return $Url;
 } 
-echo createSlug($_SERVER['REQUEST_URI'],$_GET);
+$_SERVER['REQUEST_URI'] = createSlug($_SERVER['REQUEST_URI'],$_GET);
+// echo $_SERVER['REQUEST_URI'];
 ?>
