@@ -57,6 +57,6 @@ function createSlug($Url,$Var){
     }
     return $Url;
 } 
-$_SERVER['REQUEST_URI'] = createSlug($_SERVER['REQUEST_URI'],$_GET);
+// $_SERVER['REQUEST_URI'] = createSlug($_SERVER['REQUEST_URI'],$_GET);
 // echo $_SERVER['REQUEST_URI'];
 ?>
