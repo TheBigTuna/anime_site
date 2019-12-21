@@ -91,9 +91,10 @@
         }
         
         var modalButtonOutput = "";
-        var updatePostUrl = 'updatePost.php?ID' + Id + '&Type=' + Type + '&Tag1=' + Tag1 ;
+        var updatePostUrl = 'updatePost.php?ID=' + Id + '&Type=' + Type + '&Tag1=' + Tag1;
+        var removePostUrl = 'removePost.php?ID=' + Id;
         modalButtonOutput += "<a href=" + updatePostUrl + "><button type='button' class='btn btn-secondary'>Update</button></a>";
-        modalButtonOutput += "<button type='button' class='btn btn-danger ml-3'>Delete</button>";
+        modalButtonOutput += "<a href=" + removePostUrl + "><button type='button' class='btn btn-danger ml-3'>Delete</button></a>";
 
         // Output Post Data to table
         $("#ModalPostOutput").html(modalPostOutput);

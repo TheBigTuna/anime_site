@@ -6,10 +6,10 @@
 ?>
 
 <div class="container">
-    <a href="createPost.php">
+    <a href="createPost.php" style="text-decoration: none;">
         <button type="button" class="btn btn-dark btn-block adminBtn mb-2">Create Post</button>
     </a>
-    <a href="ManagePost.php">
+    <a href="ManagePost.php" style="text-decoration: none;">
         <button type="button" class="btn btn-dark btn-block adminBtn mt-2">Manage Post</button>
     </a>
 </div>
