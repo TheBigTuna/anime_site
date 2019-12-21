@@ -58,6 +58,11 @@ function createSlug($Url,$Var){
     // }
     // return $Url;
 
+
+
+
+
+    
     $Slug = array();
     array_push($Slug,$Url);
     array_push($Slug,$Var['ID']);

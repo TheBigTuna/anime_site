@@ -39,7 +39,10 @@
                 <img src="/anime_site/images/fullLogo.png" id="navLogoImg">
               </a>
             </div>
-            <div id="navbarNav">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa fa-bars fa-2x"></i>
+            </button>
+            <div id="navbarNav" class="collapse">
               <ul class="navbar-nav" id="navbarMenu">
               <li class="nav-item">
                   <a class="nav-link navMenuLink" href="/anime_site/index.php">Home</a>
@@ -53,9 +56,9 @@
                 <!-- <li class="nav-item">
                   <a class="nav-link navMenuLink" href="/anime_site/layout/manga.php">manga</a>
                 </li> -->
-                <li class="nav-item">
-                  <!-- <a class="nav-link navMenuLink" href="/anime_site/layout/about.php">about</a> -->
-                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link navMenuLink" href="/anime_site/layout/about.php">about</a>
+                </li> -->
                 <li class="nav-item">
                   <a class="nav-link navMenuLink" href="/anime_site/layout/contact.php">contact</a>
                 </li>
