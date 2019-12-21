@@ -3,6 +3,8 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
+// $username = "omoore94_omoore";
+// $password = "deandre94";
 $conn = mysqli_connect($servername, $username, $password);
 if($conn == true){
     // echo "Connected";

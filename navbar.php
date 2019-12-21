@@ -1,9 +1,13 @@
+<?php
+  // Start the session
+  session_start();
+  // error_reporting(0);
+?>
+
 <!DOCTYPE html>
     <html lang="en">
         <head>
           <?php
-              // Start the session
-              session_start();
               include("resources/connection.php"); 
               include("functions.php"); 
               //  include("/anime_site/api_config.php"); 
