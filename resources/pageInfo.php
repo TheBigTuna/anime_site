@@ -39,24 +39,34 @@ if(!isset($_SESSION['RecentArticles'])){
 }
 
 function createSlug($Url,$Var){
-    if(strpos($_SERVER['REQUEST_URI'],"/article.php")){
-        $Url = strtolower($Url);
-        $Url = substr($Url, 0, strrpos($Url, '?'));
-        $Url .= "/Article";
-        $Url .= "/" . $Var['ID'];
-        $Url .= "/" . $Var['Title'];
-        $Url = str_replace("_", "-", $Url);
-        $Url = str_replace("#", "", $Url);
-        $Url = str_replace("+", "", $Url);
-        $Url = str_replace(">", "", $Url);
-        $Url = str_replace("<", "", $Url);
-        $Url = str_replace("(", "", $Url);
-        $Url = str_replace(")", "", $Url);
-        $Url = str_replace("=", "", $Url); 
-        $Url = str_replace(" ", "-", $Url);
-    }
-    return $Url;
+    $Url = str_replace("/anime_site", "", $Url);
+    $Url = strtolower($Url);
+    // if(strpos($_SERVER['REQUEST_URI'],"/article.php")){
+    //     $Url = substr($Url, 0, strrpos($Url, '?'));
+    //     $Url .= "/Article";
+    //     $Url .= "/" . $Var['ID'];
+    //     $Url .= "/" . $Var['Title'];
+    //     $Url = str_replace("_", "-", $Url);
+    //     $Url = str_replace("#", "", $Url);
+    //     $Url = str_replace("+", "", $Url);
+    //     $Url = str_replace(">", "", $Url);
+    //     $Url = str_replace("<", "", $Url);
+    //     $Url = str_replace("(", "", $Url);
+    //     $Url = str_replace(")", "", $Url);
+    //     $Url = str_replace("=", "", $Url); 
+    //     $Url = str_replace(" ", "-", $Url);
+    // }
+    // return $Url;
+
+    $Slug = array();
+    array_push($Slug,$Url);
+    array_push($Slug,$Var['ID']);
+    array_push($Slug,$Var['Title']);
+
+    return $Slug;
 } 
-// $_SERVER['REQUEST_URI'] = createSlug($_SERVER['REQUEST_URI'],$_GET);
-// echo $_SERVER['REQUEST_URI'];
+
+// echo http_build_query(createSlug($_SERVER['REQUEST_URI'],$_GET));
+// $Slug = createSlug($_SERVER['REQUEST_URI'],$_GET);
+// http_build_query($Slug);
 ?>
