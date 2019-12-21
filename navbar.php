@@ -20,7 +20,6 @@
               <link href="/anime_site/style/main.css" rel="stylesheet">
               <script src="/anime_site/script/jquery-3.4.1.js"></script>
               <script src="/anime_site/script/bootstrap.js"></script>
-              <script src="/anime_site/script/main.js"></script>
               <!-- Global site tag (gtag.js) - Google Analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152462977-1"></script>
             <script>
@@ -42,7 +41,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <i class="fa fa-bars fa-2x"></i>
             </button>
-            <div id="navbarNav" class="collapse">
+            <div id="navbarNav">
               <ul class="navbar-nav" id="navbarMenu">
               <li class="nav-item">
                   <a class="nav-link navMenuLink" href="/anime_site/index.php">Home</a>
@@ -75,3 +74,4 @@
             </div>
           </nav>
         </div>
+        <script src="/anime_site/script/main.js"></script>
