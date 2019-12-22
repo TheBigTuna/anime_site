@@ -1,7 +1,6 @@
 <?php
   // Start the session
   session_start();
-  // error_reporting(0);
 ?>
 
 <!DOCTYPE html>
