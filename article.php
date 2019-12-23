@@ -6,10 +6,8 @@
         <?php
             // Query to fetch currently available articles
             $ID = mysqli_real_escape_string($conn, $_GET['ID']);
-            $SQL = "SELECT * FROM omoore94_animerooms.cmsarticles AS A INNER JOIN omoore94_animerooms.cmsarticlesinfo AS AI ON AI.ID = A.ID WHERE A.ID = $ID ORDER BY A.ID DESC";
-            $FetchArticles = $conn->prepare($SQL);
-            $FetchArticles->execute();
-            $FetchArticlesResult = $FetchArticles->get_result();
+            $FetchArticles = "SELECT * FROM omoore94_animerooms.cmsarticles AS A INNER JOIN omoore94_animerooms.cmsarticlesinfo AS AI ON AI.ID = A.ID WHERE A.ID = $ID ORDER BY A.ID DESC";
+            $FetchArticlesResult = mysqli_query($conn, $FetchArticles);
             $ArticleRow = array();
             while($row = mysqli_fetch_assoc($FetchArticlesResult)){
                 array_push($ArticleRow, $row);

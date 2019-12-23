@@ -50,11 +50,11 @@
     }
 
     if($InsertFail == true){
-        $mysqli->rollback();
+        // $mysqli->rollback();
     }
     else{
-        mysqli_commit($link);
+        // mysqli_commit($link);
     }
 
-    header("Location: main.php");
+    // header("Location: main.php");
 ?>
