@@ -22,7 +22,7 @@
                     </div>
                     <div class="col-sm-12 col-lg-10">
                         <div class="ArticlePreviewContent">
-                            <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>&Title=<?= $row['ArticleName']; ?>"><h5 class="ArticlePreviewTitle"><?= $row['ArticleName']; ?></h5></a>
+                            <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>"><h5 class="ArticlePreviewTitle"><?= $row['ArticleName']; ?></h5></a>
                             <!-- <h6 class="ArticlePreviewSubTitle"><?= $row['ArticleSubTitle']; ?></h6> -->
                             <?php
                                 if(strlen($row['Text']) > 250){
