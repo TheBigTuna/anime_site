@@ -9,6 +9,6 @@
     $RemoveArticle = "DELETE FROM omoore94_animerooms.cmsarticlesinfo WHERE ID = $ID";
     $RemoveArticleResult = mysqli_query($conn, $RemoveArticle);
 
-    header('Location: /anime_site/admin/ManagePost.php');
+    header('Location: /anime_site/admin/managePost.php');
     exit();
 ?>

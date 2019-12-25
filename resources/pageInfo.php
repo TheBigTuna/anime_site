@@ -23,6 +23,9 @@ else if(strpos($_SERVER['REQUEST_URI'],"/manga.php")){
 else if(strpos($_SERVER['REQUEST_URI'],"/about.php")){
     $_SESSION['CurrentPage'] = "About";
 }
+else if(strpos($_SERVER['REQUEST_URI'],"/news.php")){
+    $_SESSION['CurrentPage'] = "News";
+}
 else if(strpos($_SERVER['REQUEST_URI'],"/article.php")){
     $_SESSION['CurrentPage'] = "Article";
 }

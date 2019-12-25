@@ -55,6 +55,9 @@
                 <!-- <li class="nav-item">
                   <a class="nav-link navMenuLink" href="/anime_site/layout/manga.php">manga</a>
                 </li> -->
+                <li class="nav-item">
+                  <a class="nav-link navMenuLink" href="/anime_site/layout/news.php">news</a>
+                </li>
                 <!-- <li class="nav-item">
                   <a class="nav-link navMenuLink" href="/anime_site/layout/about.php">about</a>
                 </li> -->
