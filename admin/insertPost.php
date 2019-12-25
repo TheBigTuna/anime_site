@@ -56,5 +56,5 @@
         // mysqli_commit($link);
     }
 
-    // header("Location: main.php");
+    header("Location: main.php");
 ?>

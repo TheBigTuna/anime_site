@@ -26,8 +26,12 @@ else if(strpos($_SERVER['REQUEST_URI'],"/about.php")){
 else if(strpos($_SERVER['REQUEST_URI'],"/article.php")){
     $_SESSION['CurrentPage'] = "Article";
 }
+else{
+    $_SESSION['CurrentPage'] = "Home";
+}
 
 // If recent articles have not been stored create a recent articles variable and store the five most recent articles
+// unset($_SESSION['RecentArticles']);
 if(!isset($_SESSION['RecentArticles'])){
     $_SESSION['RecentArticles'] = array();
     // Query to fetch currently available articles

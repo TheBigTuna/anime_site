@@ -2,16 +2,12 @@
     session_start();
     include('../resources/connection.php');
 
-    $ID = $_GET['ID'];
-    $SQL = "DELETE FROM omoore94_animerooms.cmsarticles WHERE ID = ?";
-    $RemoveArticle = $conn->prepare($SQL);
-    $RemoveArticle->bind_param('s', $ID);
-    $RemoveArticle->execute();
+    $ID = mysqli_real_escape_string($conn, $_GET['ID']);
+    $RemoveArticle = "DELETE FROM omoore94_animerooms.cmsarticles WHERE ID = $ID";
+    $RemoveArticleResult = mysqli_query($conn, $RemoveArticle);
 
-    $SQL = "DELETE FROM omoore94_animerooms.cmsarticlesinfo WHERE ID = ?";
-    $RemoveArticleInfo = $conn->prepare($SQL);
-    $RemoveArticleInfo->bind_param('s', $ID);
-    $RemoveArticleInfo->execute();
+    $RemoveArticle = "DELETE FROM omoore94_animerooms.cmsarticlesinfo WHERE ID = $ID";
+    $RemoveArticleResult = mysqli_query($conn, $RemoveArticle);
 
     header('Location: /anime_site/admin/ManagePost.php');
     exit();
