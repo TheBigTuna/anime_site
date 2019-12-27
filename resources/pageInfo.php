@@ -4,33 +4,41 @@
 // Depending on the page apply the appropiate title
 if(strpos($_SERVER['REQUEST_URI'],"/index.php")){
     $_SESSION['CurrentPage'] = "Home";
+    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to the love of anime and anime merchandise.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/lifestyle.php")){
     $_SESSION['CurrentPage'] = "Lifestyle";
+    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to the love of anime and anime merchandise.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/admin/")){
     $_SESSION['CurrentPage'] = "Admin";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/contact.php")){
     $_SESSION['CurrentPage'] = "Contact";
+    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to the love of anime and anime merchandise.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/anime.php")){
     $_SESSION['CurrentPage'] = "Anime";
+    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to the love of anime and anime merchandise.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/manga.php")){
     $_SESSION['CurrentPage'] = "Manga";
+    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to the love of anime and anime merchandise.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/about.php")){
     $_SESSION['CurrentPage'] = "About";
+    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to the love of anime and anime merchandise.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/news.php")){
     $_SESSION['CurrentPage'] = "News";
+    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to the love of anime and anime merchandise.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/article.php")){
     $_SESSION['CurrentPage'] = "Article";
 }
 else{
     $_SESSION['CurrentPage'] = "Home";
+    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to the love of anime and anime merchandise.";
 }
 
 // If recent articles have not been stored create a recent articles variable and store the five most recent articles

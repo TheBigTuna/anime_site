@@ -12,7 +12,7 @@
               <title><?= $_SESSION['CurrentPage']; ?> - animerooms.com</title>
               <meta charset="UTF-8">
               <meta name="viewport" content="width=device-width, initial-scale=1">
-              <meta name='description' content="<?= $_SESSION['CurrentSubtitle']; ?>">            
+              <meta name='description' content="<?= $_SESSION['Description']; ?>">            
               <meta name="author" content="<?= $_SESSION['ArticleAuthor']; ?>">
               <link rel="icon" href="/anime_site/images/halfLogo.png">
               <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
