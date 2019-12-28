@@ -2,16 +2,19 @@
 // This page hold any information needed for the current page
 
 // Depending on the page apply the appropiate title
-if(strpos($_SERVER['REQUEST_URI'],"/index.php")){
+if(strpos($_SERVER['REQUEST_URI'],"/admin/")){
+    $_SESSION['CurrentPage'] = "Admin";
+    if(!strpos($_SERVER['REQUEST_URI'],"/admin/index.php")){
+        verifyAdmin();
+    }
+}
+else if(strpos($_SERVER['REQUEST_URI'],"/index.php")){
     $_SESSION['CurrentPage'] = "Home";
     $_SESSION['Description'] = "Hello animerooms is a blog dedicated to the love of anime and anime merchandise.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/lifestyle.php")){
     $_SESSION['CurrentPage'] = "Lifestyle";
     $_SESSION['Description'] = "Hello animerooms is a blog dedicated to the love of anime and anime merchandise.";
-}
-else if(strpos($_SERVER['REQUEST_URI'],"/admin/")){
-    $_SESSION['CurrentPage'] = "Admin";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/contact.php")){
     $_SESSION['CurrentPage'] = "Contact";
