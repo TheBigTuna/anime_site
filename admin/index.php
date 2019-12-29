@@ -1,8 +1,7 @@
-<!-- Admin Login page -->
 <?php
  include('../navbar.php');
  if(isset($_SESSION['IsAdmin'])){
-    header('Location: /anime_site/admin/main.php');
+    echo "<script>window.location.href = '/anime_site/admin/main.php';</script>";
  }
 ?>
 

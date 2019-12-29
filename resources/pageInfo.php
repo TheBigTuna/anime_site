@@ -2,9 +2,9 @@
 // This page hold any information needed for the current page
 
 // Depending on the page apply the appropiate title
-if(strpos($_SERVER['REQUEST_URI'],"/admin/")){
+if(strpos($_SERVER['REQUEST_URI'],"/admin") > -1){
     $_SESSION['CurrentPage'] = "Admin";
-    if(!strpos($_SERVER['REQUEST_URI'],"/admin/index.php")){
+    if(strpos($_SERVER['REQUEST_URI'],"/admin/index.php") == -1){
         verifyAdmin();
     }
 }

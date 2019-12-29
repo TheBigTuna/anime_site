@@ -1,7 +1,7 @@
 <?php
     // Function to verify admins 
     function verifyAdmin(){
-        if(!isset($_SESSION['IsAdmin'])){
+        if($_SESSION['IsAdmin'] != TRUE){
             echo "<script>window.location.href = '/anime_site/index.php';</script>";
         }
     }
@@ -12,6 +12,8 @@
         $Article = str_replace( "\n", '<br />' . str_repeat('&nbsp;', 5), $Article);
         $Article = str_replace( "<b>", "<b>", $Article);
         $Article = str_replace( "</b>", "</b>", $Article);
+        $Article = str_replace( "<i>", "<i>", $Article);
+        $Article = str_replace( "</i>", "</i>", $Article);
 
         // Adds indentation for new paragraphs
         $Article = str_replace( "\n", str_repeat('&nbsp;', 5), $Article);
