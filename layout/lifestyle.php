@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col-sm-12 col-lg-2">
                         <div class="ArticlePreviewImgContainer">
-                            <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>"><img src="/anime_site/images/<?= $row['Img1']; ?>" class="ArticlePreviewImg"></a>
+                            <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>"><img src="/anime_site/images/<?= $row['Img1']; ?>" style="object-fit: cover;" class="ArticlePreviewImg"></a>
                         </div>
                     </div>
                     <div class="col-sm-12 col-lg-10">
