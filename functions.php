@@ -39,6 +39,21 @@
             case "5":
                 break;
             case "6":
+                if(strpos($Article, "!Image1!") == true){
+                    $Article = str_replace( "!Image1!", "<img src='images/" . $Images[0] . "'style='height: 280px; width: 60%; object-fit: cover;'>", $Article);
+                }
+                if(strpos($Article, "!Image2!") == true){
+                    $Article = str_replace( "!Image2!", "<img src='images/" . $Images[1] . "'style='height: 280px; width: 60%; object-fit: cover;'>", $Article);
+                }
+                if(strpos($Article, "!Image3!") == true){
+                    $Article = str_replace( "!Image3!", "<img src='images/" . $Images[2] . "'style='height: 280px; width: 60%; object-fit: cover;'>", $Article);
+                }
+                if(strpos($Article, "!Image4!") == true){
+                    $Article = str_replace( "!Image4!", "<img src='images/" . $Images[3] . "'style='height: 280px; width: 60%; object-fit: cover;'>", $Article);
+                }
+                if(strpos($Article, "!Image5!") == true){
+                    $Article = str_replace( "!Image5!", "<img src='images/" . $Images[4] . "'style='height: 280px; width: 60%; object-fit: cover;'>", $Article);
+                }
                 break;
         }
 
