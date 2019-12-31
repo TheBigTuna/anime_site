@@ -14,6 +14,9 @@
         $Article = str_replace( "</b>", "</b>", $Article);
         $Article = str_replace( "<i>", "<i>", $Article);
         $Article = str_replace( "</i>", "</i>", $Article);
+        $Article = str_replace( "!Subheader", "<span style='font-size: 20px;'>", $Article);
+        $Article = str_replace( "Subheader!", "</span>", $Article);
+
 
         // Adds indentation for new paragraphs
         $Article = str_replace( "\n", str_repeat('&nbsp;', 5), $Article);
