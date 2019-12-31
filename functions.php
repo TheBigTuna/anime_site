@@ -1,7 +1,7 @@
 <?php
     // Function to verify admins 
     function verifyAdmin(){
-        if($_SESSION['IsAdmin'] != TRUE){
+        if($_SESSION['IsAdmin'] != True){
             echo "<script>window.location.href = '/anime_site/index.php';</script>";
         }
     }

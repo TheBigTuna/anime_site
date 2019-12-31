@@ -4,7 +4,7 @@
 // Depending on the page apply the appropiate title
 if(strpos($_SERVER['REQUEST_URI'],"/admin") > -1){
     $_SESSION['CurrentPage'] = "Admin";
-    if(strpos($_SERVER['REQUEST_URI'],"/admin/index.php") == -1){
+    if(strpos($_SERVER['REQUEST_URI'],"index.php") == False){
         verifyAdmin();
     }
 }
