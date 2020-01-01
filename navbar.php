@@ -8,7 +8,7 @@
               //  include("/anime_site/api_config.php"); 
               include("resources/pageInfo.php"); 
           ?>
-              <title><?= $_SESSION['CurrentPage']; ?> - animerooms.com</title>
+              <title><?= $_SESSION['CurrentPage']; ?></title>
               <meta charset="UTF-8">
               <meta name="viewport" content="width=device-width, initial-scale=1">
               <meta name='description' content="<?= $_SESSION['Description']; ?>">            

@@ -3,21 +3,6 @@
 ?>
 <div class="row">
     <div class="container">
-        <?php
-            // Query to fetch currently available articles
-            $ID = mysqli_real_escape_string($conn, $_GET['ID']);
-            $FetchArticles = "SELECT * FROM omoore94_animerooms.cmsarticles AS A INNER JOIN omoore94_animerooms.cmsarticlesinfo AS AI ON AI.ID = A.ID WHERE A.ID = $ID ORDER BY A.ID DESC";
-            $FetchArticlesResult = mysqli_query($conn, $FetchArticles);
-            $ArticleRow = array();
-            while($row = mysqli_fetch_assoc($FetchArticlesResult)){
-                array_push($ArticleRow, $row);
-            }
-            $_SESSION['CurrentPage'] = $ArticleRow[0]['ArticleName'];
-            $_SESSION['CurrentSubtitle'] = $ArticleRow[0]['ArticleSubTitle'];
-            $_SESSION['Description'] = $ArticleRow[0]['ArticleSubTitle'];
-            $_SESSION['ArticleAuthor'] = $ArticleRow[0]['User'];
-            $ImageArray = array($ArticleRow[0]['Img1'], $ArticleRow[0]['Img2'], $ArticleRow[0]['Img3'],$ArticleRow[0]['Img4'],$ArticleRow[0]['Img5'],);
-        ?>
                 <div class="ArticlePageBG">
                     <!-- Article Title -->
                     <div class="ArticlePageTitleBG">
