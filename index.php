@@ -6,8 +6,10 @@
     <div class="container">
         <div class="ArticlePreviewBG">
         <?php
-            // loop to fetch recent articles
-            foreach($_SESSION['RecentArticles'] as $row){
+        $FetchArticles = "SELECT * FROM omoore94_animerooms.cmsarticles AS A INNER JOIN omoore94_animerooms.cmsarticlesinfo AS B ON A.ID = B.ID ORDER BY Timestamp DESC";        
+        $FetchArticlesResult = mysqli_query($conn, $FetchArticles);
+        $ArticleRow = array();
+        while($row = mysqli_fetch_assoc($FetchArticlesResult)){
         ?>
             <div class="ArticlePreviewCard">
                 <div class="row">
