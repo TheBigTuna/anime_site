@@ -46,7 +46,7 @@ else if(strpos($_SERVER['REQUEST_URI'],"/article.php") > -1){
     while($row = mysqli_fetch_assoc($FetchArticlesResult)){
         array_push($ArticleRow, $row);
     }
-    $_SESSION['CurrentPage'] = $ArticleRow[0]['ArticleName'];
+    $_SESSION['CurrentPage'] = $ArticleRow[0]['ArticleName'] . " - animerooms.com";
     $_SESSION['CurrentSubtitle'] = $ArticleRow[0]['ArticleSubTitle'];
     $_SESSION['Description'] = $ArticleRow[0]['ArticleSubTitle'];
     $_SESSION['ArticleAuthor'] = $ArticleRow[0]['User'];
