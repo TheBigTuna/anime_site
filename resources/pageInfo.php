@@ -4,38 +4,38 @@
 // Depending on the page apply the appropiate title
 if(strpos($_SERVER['REQUEST_URI'],"/admin") > -1){
     $_SESSION['CurrentPage'] = "Admin - animerooms.com";
-    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to the love of anime.";
+    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
     if(strpos($_SERVER['REQUEST_URI'],"index.php") == False){
         verifyAdmin();
     }
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/index.php")){
     $_SESSION['CurrentPage'] = "Home - animerooms.com";
-    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to the love of anime.";
+    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/lifestyle.php")){
     $_SESSION['CurrentPage'] = "Lifestyle - animerooms.com";
-    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to the love of anime.";
+    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/contact.php")){
     $_SESSION['CurrentPage'] = "Contact - animerooms.com";
-    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to the love of anime.";
+    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/anime.php")){
     $_SESSION['CurrentPage'] = "Anime - animerooms.com";
-    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to the love of anime.";
+    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/manga.php")){
     $_SESSION['CurrentPage'] = "Manga - animerooms.com";
-    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to the love of anime.";
+    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/about.php")){
     $_SESSION['CurrentPage'] = "About - animerooms.com";
-    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to the love of anime.";
+    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/news.php")){
     $_SESSION['CurrentPage'] = "News - animerooms.com";
-    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to the love of anime.";
+    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/article.php") > -1){
     // Query to fetch currently available articles
@@ -54,7 +54,7 @@ else if(strpos($_SERVER['REQUEST_URI'],"/article.php") > -1){
 }
 else{
     $_SESSION['CurrentPage'] = "animerooms.com";
-    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to the love of anime.";
+    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
 }
 
 // If recent articles have not been stored create a recent articles variable and store the five most recent articles
