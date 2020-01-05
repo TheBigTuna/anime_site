@@ -17,7 +17,6 @@
         $Article = str_replace( "!Subheader", "<span style='font-size: 20px;'>", $Article);
         $Article = str_replace( "Subheader!", "</span>", $Article);
 
-
         // Adds indentation for new paragraphs
         $Article = str_replace( "\n", str_repeat('&nbsp;', 5), $Article);
         
@@ -35,13 +34,13 @@
                 break;
             case "2":
                 if(strpos($Article, "!Image2!") == true){
-                    $Article = str_replace( "!Image2!", "<img src='images/" . $Images[1] . "'style='height: 220px; width: 90%; display: block; margin: 0 auto; object-fit: cover;'>", $Article);
+                    $Article = str_replace( "!Image2!", "<img src='images/" . $Images[1] . "'style='height: 380px; width: 90%; display: block; margin: 0 auto; object-fit: cover;'>", $Article);
                 }
                 if(strpos($Article, "!Image3!") == true){
-                    $Article = str_replace( "!Image3!", "<img src='images/" . $Images[2] . "'style='height: 220px; width: 90%; display: block; margin: 0 auto; object-fit: cover;'>", $Article);
+                    $Article = str_replace( "!Image3!", "<img src='images/" . $Images[2] . "'style='height: 380px; width: 90%; display: block; margin: 0 auto; object-fit: cover;'>", $Article);
                 }
                 if(strpos($Article, "!Image4!") == true){
-                    $Article = str_replace( "!Image4!", "<img src='images/" . $Images[3] . "'style='height: 220px; width: 90%; display: block; margin: 0 auto; object-fit: cover;'>", $Article);
+                    $Article = str_replace( "!Image4!", "<img src='images/" . $Images[3] . "'style='height: 380px; width: 90%; display: block; margin: 0 auto; object-fit: cover;'>", $Article);
                 }
                 break;
             case "3":
