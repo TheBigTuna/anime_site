@@ -58,7 +58,7 @@
                                             <div class="col-sm-12 col-md-5">
                                                 <!-- Recent Article Images -->
                                                 <div class="ArticleRecentImagesContainer">
-                                                    <img src="images/<?= $row['Img1']; ?>" style="height: 90px; width: 100%; float: right; object-fit: cover;">
+                                                    <img src="images/<?= $row['Img1']; ?>">
                                                 </div>
                                             </div>
                                             <div class="col-sm-12 col-md-7">
