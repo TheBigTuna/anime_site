@@ -210,7 +210,7 @@ body {
 }
 .ArticleListTags li{
   display: inline;
-  font-size: 13px;
+  font-size: 15px;
   color: #0B5AA3;
   transition: 0.3s;
 }
@@ -222,13 +222,14 @@ body {
 
 .ArticleSubTitle{
   font-weight: 600;
-  font-size: 14px;
+  font-size: 20px;
+  text-decoration: uppercase;
 }
 
 #ArticleText{
   font-size: 15px;
   font-family: "Open Sans", sans-serif;
-  line-height: 2;
+  line-height: 1.5;
 }
 
 .AboutBG{
@@ -254,7 +255,7 @@ body {
   text-indent: 10px;
   font-family: "Open Sans", sans-serif;
   padding: 0px 20px 0px 20px;
-  line-height: 2;
+  line-height: 1.5;
 }
 
 .ContactBG{
