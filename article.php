@@ -33,6 +33,7 @@
                         <div class="row">
                             <div class="col-sm-12 col-lg-12">
                                 <div class="ArticleBodyContainer">
+                                    <!-- Article subtitle -->
                                     <div class="ArticleSubTitleBg">
                                         <h6 class="ArticleSubTitle"><?= $ArticleRow[0]['ArticleSubTitle']; ?></h6>
                                     </div>
