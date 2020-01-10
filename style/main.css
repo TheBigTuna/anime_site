@@ -120,6 +120,34 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+.ArticlePageMainTitleBG{
+  padding: 20px 20px;
+}
+
+.ArticlePreviewMainTitle{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  border-bottom: #ededed 1px solid;
+  padding: 10px 0px;
+  color: black;
+}
+
+.ArticlePreviewMainTitle:hover{
+  color: #007bff;
+}
+
+.ArticlePreviewMainTitleLink:hover{
+  text-decoration-color: #007bff;
+}
+
+.ArticlePreviewInfoSection{
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.ArticlePreviewInfoText{
+  font-size: 14px;
+}
 
 .ArticlePreviewCard{
   margin: 12px 0px;

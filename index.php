@@ -17,15 +17,27 @@
                 <div class="AritclePreviewMainCard">
                     <div class="row">
                         <div class="col-sm-12">
-                            <h2 class="ArticlePageTitle"><?= $row['ArticleName']; ?></h2>
+                            <div class="ArticlePageMainTitleBG">
+                                <a class="ArticlePreviewMainTitleLink" href="/anime_site/article.php?ID=<?= $row['ID']; ?>">
+                                    <h4 class="ArticlePreviewMainTitle"><?= $row['ArticleName']; ?></h4>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-12 col-lg-8">
+                        <div class="col-sm-12 col-lg-9">
                             <!-- First picture for the current article -->
-                            <div class="ArticleMainPictureBG">
-                                <img src="images/<?= $row['Img1']; ?>" class="ArticleImg" style="height: 450px; width: 100%; object-fit: cover; float: right;">
+                            <div class="ArticlePreviewMainPictureBG">
+                                <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>">
+                                    <img src="images/<?= $row['Img1']; ?>" class="ArticlePreviewMainImg" style="height: 450px; width: 100%; object-fit: cover; float: right;">
+                                </a>
+                                <div class="ArticlePreviewInfoSection">
+                                    <p class="ArticlePreviewInfoText"> by <span style="font-weight: 600;"><?= $row['User']; ?></span> | <?= date("F d, Y g:i A",strtotime($row['Timestamp'])); ?></p>
+                                </div>
                             </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-3">
+                            
                         </div>
                     </div>
                 </div>
