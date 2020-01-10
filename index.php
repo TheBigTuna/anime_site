@@ -29,11 +29,20 @@
                             <!-- First picture for the current article -->
                             <div class="ArticlePreviewMainPictureBG">
                                 <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>">
-                                    <img src="images/<?= $row['Img1']; ?>" class="ArticlePreviewMainImg" style="height: 450px; width: 100%; object-fit: cover; float: right;">
+                                    <img src="images/<?= $row['Img1']; ?>" class="ArticlePreviewMainImg" style="height: 100%; width: 100%; object-fit: cover; float: right;">
                                 </a>
-                                <div class="ArticlePreviewInfoSection">
-                                    <p class="ArticlePreviewInfoText"> by <span style="font-weight: 600;"><?= $row['User']; ?></span> | <?= date("F d, Y g:i A",strtotime($row['Timestamp'])); ?></p>
-                                </div>
+                            </div>
+                            <div class="ArticlePreviewInfoSection">
+                                    <p class="ArticlePreviewInfoText"> by <?= $row['User']; ?> | <?= date("F d, Y g:i A",strtotime($row['Timestamp'])); ?></p>
+                                    <?php
+                                        if(strlen($row['ArticleSubTitle']) > 125){
+                                            $row['ArticleSubTitle'] = substr_replace($row['ArticleSubTitle'], "<span style='font-size:16px; font-weight: 600;'>....</span><a href='/anime_site/article.php?ID=" . $row['ID'] . "'><span style='font-size:13px; color: #1bb1dc;'> Read More </span></a>", 250);
+                                        }
+                                    ?>
+                                <p class="ArticlePreviewImgText"><?= $row['ArticleSubTitle']; ?></p>
+                                <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>">
+                                    <p class="ArticlePreviewInfoOptions">Read Article</p>
+                                </a>
                             </div>
                         </div>
                         <div class="col-sm-12 col-lg-3">

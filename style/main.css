@@ -140,6 +140,9 @@ body {
   text-decoration-color: #007bff;
 }
 
+.ArticlePreviewMainPictureBG{
+  height: 450px;
+}
 .ArticlePreviewInfoSection{
   background-color: #f5f5f5;
   padding: 20px;
@@ -147,6 +150,16 @@ body {
 
 .ArticlePreviewInfoText{
   font-size: 14px;
+}
+
+.ArticlePreviewImgText{
+  margin: 0 0 15px 0;
+  font-size: 14px;
+}
+
+.ArticlePreviewInfoOptions{
+  font-size: 14px;
+  text-align: right;
 }
 
 .ArticlePreviewCard{
@@ -189,6 +202,7 @@ body {
   font-family: "Open Sans", sans-serif;
 
 }
+
 .ArticlePageTitleBG{
   padding: 20px 20px;
 }
@@ -208,6 +222,7 @@ body {
 #ArticleSection{
   margin: 30px 0px;
 }
+
 .ArticleMainPictureBG{
   max-width: 100%;
   max-height: 100%;
