@@ -17,7 +17,7 @@
                     <div class="col-sm-12 col-lg-8">
                         <!-- First picture for the current article -->
                         <div class="ArticleMainPictureBG">
-                            <img src="images/<?= $ArticleRow[0]['Img1']; ?>" class="ArticleImg" style="height: 450px;">
+                            <img src="images/<?= $ArticleRow[0]['Img1']; ?>" class="ArticleImg" style="height: 450px; max-width: 100%;">
                         </div>
                         <!-- List tagged categories for the current article -->
                         <div class="ArticleListTags">
