@@ -25,11 +25,11 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-12 col-lg-9">
+                        <div class="col-sm-12 col-lg-12">
                             <!-- First picture for the current article -->
                             <div class="ArticlePreviewMainPictureBG">
                                 <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>">
-                                    <img src="images/<?= $row['Img1']; ?>" class="ArticlePreviewMainImg" style="height: 100%; width: 100%; object-fit: cover; float: right;">
+                                    <img src="images/<?= $row['Img1']; ?>" class="ArticlePreviewMainImg" style="height: 100%; width: 80%; object-fit: cover;">
                                 </a>
                             </div>
                             <div class="ArticlePreviewInfoSection">
@@ -45,7 +45,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-sm-12 col-lg-3">
+                        <div class="col-sm-0 col-lg-0">
                             
                         </div>
                     </div>
