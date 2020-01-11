@@ -6,7 +6,7 @@
         <div class="ArticlePageBG">
             <!-- Article Title -->
             <div class="ArticlePageTitleBG">
-                <h2 class="ArticlePageTitle"><?= $ArticleRow[0]['ArticleName']; ?></h2>
+                <h1 class="ArticlePageTitle"><?= $ArticleRow[0]['ArticleName']; ?></h1>
             </div>
             <!-- Article Author -->
             <h6 class="ArticlePageAuthor">By <span style="color: #0B5AA3;"><?= $ArticleRow[0]['User']; ?></span></h6>

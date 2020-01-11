@@ -4,6 +4,9 @@
 
 <div class="row">
     <div class="container">
+        <div class="PageTitleBG">
+            <h1 class="PageTitle d-none">Home</h1>
+        </div>
         <div class="ArticlePreviewBG">
         <?php
         $FetchArticles = "SELECT * FROM omoore94_animerooms.cmsarticles AS A INNER JOIN omoore94_animerooms.cmsarticlesinfo AS B ON A.ID = B.ID ORDER BY Timestamp DESC";        
@@ -29,7 +32,7 @@
                             <!-- First picture for the current article -->
                             <div class="ArticlePreviewMainPictureBG">
                                 <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>">
-                                    <img src="images/<?= $row['Img1']; ?>" class="ArticlePreviewMainImg" style="height: 100%; width: 80%; object-fit: cover;">
+                                    <img src="images/<?= $row['Img1']; ?>" class="ArticlePreviewMainImg" style="height: 100%; width: 90%; object-fit: cover;">
                                 </a>
                             </div>
                             <div class="ArticlePreviewInfoSection">
