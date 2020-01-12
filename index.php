@@ -21,7 +21,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="ArticlePageMainTitleBG">
-                                <a class="ArticlePreviewMainTitleLink" href="/anime_site/article.php?ID=<?= $row['ID']; ?>">
+                                <a class="ArticlePreviewMainTitleLink" href="/anime_site/article.php/ID/<?= $row['ID']; ?>">
                                     <h4 class="ArticlePreviewMainTitle"><?= $row['ArticleName']; ?></h4>
                                 </a>
                             </div>

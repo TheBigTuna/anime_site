@@ -46,7 +46,7 @@ else if(strpos($_SERVER['REQUEST_URI'],"/article.php") > -1){
     while($row = mysqli_fetch_assoc($FetchArticlesResult)){
         array_push($ArticleRow, $row);
     }
-    $_SESSION['CurrentPage'] = $ArticleRow[0]['ArticleName'] . " - animerooms.com";
+    $_SESSION['CurrentPage'] = $ArticleRow[0]['ArticleName'];
     $_SESSION['CurrentSubtitle'] = $ArticleRow[0]['ArticleSubTitle'];
     $_SESSION['Description'] = $ArticleRow[0]['ArticleSubTitle'];
     $_SESSION['ArticleAuthor'] = $ArticleRow[0]['User'];
@@ -105,4 +105,11 @@ function createSlug($Url,$Var){
 // echo http_build_query(createSlug($_SERVER['REQUEST_URI'],$_GET));
 // $Slug = createSlug($_SERVER['REQUEST_URI'],$_GET);
 // http_build_query($Slug);
+
+// if(empty($_SESSION['ShowNewsletter'])){
+//     $_SESSION['ShowNewsletter'] = false;
+// }
+// if($_SESSION['ShowNewsletter'] === false){
+//     $_SESSION['ShowNewsletter'] = true;
+// }
 ?>
