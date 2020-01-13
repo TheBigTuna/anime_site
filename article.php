@@ -11,7 +11,7 @@
             <!-- Article Author -->
             <h6 class="ArticlePageAuthor">By <span style="color: #0B5AA3;"><?= $ArticleRow[0]['User']; ?></span></h6>
             <!-- Timestamp from when the article was created -->
-            <h6 class="ArticlePageTimestamp"><?= date("F d, Y g:i A",strtotime($ArticleRow[0]['Timestamp'])); ?></h6>
+            <h6 class="ArticlePageTimestamp"><?= date("F d, Y",strtotime($ArticleRow[0]['Timestamp'])); ?></h6>
             <div id="ArticleSection">
                 <div class="row">
                     <div class="col-sm-12 col-lg-8">

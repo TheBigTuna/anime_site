@@ -21,7 +21,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="ArticlePageMainTitleBG">
-                                <a class="ArticlePreviewMainTitleLink" href="/anime_site/article.php/ID/<?= $row['ID']; ?>">
+                                <a class="ArticlePreviewMainTitleLink" href="/anime_site/article.php?ID=<?= $row['ID']; ?>">
                                     <h4 class="ArticlePreviewMainTitle"><?= $row['ArticleName']; ?></h4>
                                 </a>
                             </div>
@@ -36,7 +36,7 @@
                                 </a>
                             </div>
                             <div class="ArticlePreviewInfoSection">
-                                    <p class="ArticlePreviewInfoText"> by <?= $row['User']; ?> | <?= date("F d, Y g:i A",strtotime($row['Timestamp'])); ?></p>
+                                    <p class="ArticlePreviewInfoText"> by <?= $row['User']; ?> | <?= date("F d, Y",strtotime($row['Timestamp'])); ?></p>
                                     <?php
                                         if(strlen($row['ArticleSubTitle']) > 125){
                                             $row['ArticleSubTitle'] = substr_replace($row['ArticleSubTitle'], "<span style='font-size:16px; font-weight: 600;'>....</span><a href='/anime_site/article.php?ID=" . $row['ID'] . "'><span style='font-size:13px; color: #1bb1dc;'> Read More </span></a>", 250);
@@ -75,7 +75,7 @@
                                     }
                                 ?>
                                 <p class="ArticlePreviewText"><?= $row['Text']; ?></p>
-                                <p class="ArticlePreviewInfo"><?= date("F d, Y g:i A",strtotime($row['Timestamp'])); ?> by <span style="font-weight: 600;"><?= $row['User']; ?></span></p>
+                                <p class="ArticlePreviewInfo"><?= date("F d, Y",strtotime($row['Timestamp'])); ?> by <span style="font-weight: 600;"><?= $row['User']; ?></span></p>
                             </div>
                         </div>
                     </div>
