@@ -32,9 +32,13 @@
                             <!-- First picture for the current article -->
                             <div class="ArticlePreviewMainPictureBG">
                                 <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>">
-                                    <img src="images/<?= $row['Img1']; ?>" class="ArticlePreviewMainImg" style="height: 100%;">
+                                    <img src="images/<?= $row['Img1']; ?>" class="ArticlePreviewMainImg" style="height: 100%; object-fit: cover;">
                                 </a>
                             </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
                             <div class="ArticlePreviewInfoSection">
                                     <p class="ArticlePreviewInfoText"> by <?= $row['User']; ?> | <?= date("F d, Y",strtotime($row['Timestamp'])); ?></p>
                                     <?php
@@ -47,9 +51,6 @@
                                     <p class="ArticlePreviewInfoOptions">Read Article</p>
                                 </a>
                             </div>
-                        </div>
-                        <div class="col-sm-0 col-lg-0">
-                            
                         </div>
                     </div>
                 </div>

@@ -79,21 +79,24 @@
         <script src="/anime_site/script/main.js"></script>
 
       <div class="modal fade" id="newsletterModal" tabindex="-1" role="dialog" aria-labelledby="newsletterModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
-            <div class="modal-body">  
-              <h5 class="modal-title" id="newsletterModalLabel">Hey Sign up to our Newsletter</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-              <br>
-              <div class="row">
-                <div class="col-sm-12">
-                  
+            <div class="container">
+              <div class="newsletterModalContent">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <button type="button" class="close" style="font-size: 30px; float:right;" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <br>
+                    <h4>Hey! before you go would you like to sign up for updates to our new posts?</h4>
+                  </div>
                 </div>
+                <form>
+                  <div class="input-group"> 
+                    <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  </div>
+                </form>
               </div>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
             </div>
           </div>
         </div>
