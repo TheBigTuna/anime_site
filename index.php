@@ -15,6 +15,15 @@
         $RowCount = 0;
         while($row = mysqli_fetch_assoc($FetchArticlesResult)){
             $RowCount ++;
+            $Url = "/anime_site/article.php/" . $row['ID'] . "/";
+            $TitleUrl = $row['ArticleName'];
+            $TitleUrl = strtolower(trim($TitleUrl));
+            $TitleUrl = preg_replace('/[^a-z0-9-]/', '-', $TitleUrl);
+            $TitleUrl = preg_replace('/-+/', "-", $TitleUrl);
+            // return rtrim($Url, '-');
+            $Url .= $TitleUrl;
+            echo $Url;
+
             if($RowCount == 1){
             ?>
                 <div class="AritclePreviewMainCard">
