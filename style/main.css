@@ -403,6 +403,7 @@ body {
   .ArticlePreviewImg{
     float: right;
   }
+
 }
 @media  only screen and (min-width: 1200px) {
   .container-fluid {
@@ -435,6 +436,9 @@ body {
   #navbarMenu li{
     margin: 7px 0px;
     padding: 0px 20px;
+  }
+  .ArticleRecentImagesContainer img{
+    height: 240px;
   }
 }
 
