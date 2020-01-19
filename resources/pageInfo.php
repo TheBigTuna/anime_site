@@ -3,38 +3,38 @@
 
 // Depending on the page apply the appropiate title
 if(strpos($_SERVER['REQUEST_URI'],"/admin") > -1){
-    $_SESSION['CurrentPage'] = "Admin - animerooms.com";
+    $_SESSION['CurrentPage'] = "admin - animerooms.com";
     $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
     if(strpos($_SERVER['REQUEST_URI'],"index.php") == False){
         verifyAdmin();
     }
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/index.php")){
-    $_SESSION['CurrentPage'] = "Home - animerooms.com";
+    $_SESSION['CurrentPage'] = "home - animerooms.com";
     $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/lifestyle.php")){
-    $_SESSION['CurrentPage'] = "Lifestyle - animerooms.com";
+    $_SESSION['CurrentPage'] = "lifestyle - animerooms.com";
     $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/contact.php")){
-    $_SESSION['CurrentPage'] = "Contact - animerooms.com";
+    $_SESSION['CurrentPage'] = "contact - animerooms.com";
     $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/anime.php")){
-    $_SESSION['CurrentPage'] = "Anime - animerooms.com";
+    $_SESSION['CurrentPage'] = "anime - animerooms.com";
     $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/manga.php")){
-    $_SESSION['CurrentPage'] = "Manga - animerooms.com";
+    $_SESSION['CurrentPage'] = "manga - animerooms.com";
     $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/about.php")){
-    $_SESSION['CurrentPage'] = "About - animerooms.com";
+    $_SESSION['CurrentPage'] = "about - animerooms.com";
     $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/news.php")){
-    $_SESSION['CurrentPage'] = "News - animerooms.com";
+    $_SESSION['CurrentPage'] = "news - animerooms.com";
     $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/article.php") > -1){
