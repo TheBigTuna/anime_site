@@ -33,7 +33,7 @@
                                     <!-- First picture for the current article -->
                                     <div class="ArticlePreviewMainPictureBG">
                                         <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>">
-                                            <img src="/anime_site/images/<?= $row['Img1']; ?>" class="ArticlePreviewMainImg" style="height: 100%;">
+                                            <img src="/anime_site/images/<?= $row['Img1']; ?>" class="" style="height: 100%;">
                                         </a>
                                     </div>
                                     <div class="ArticlePreviewInfoSection">

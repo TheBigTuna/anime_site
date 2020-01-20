@@ -41,7 +41,7 @@
                             <!-- First picture for the current article -->
                             <div class="ArticlePreviewMainPictureBG">
                                 <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>">
-                                    <img src="images/<?= $row['Img1']; ?>" class="ArticlePreviewMainImg" style="height: 100%; object-fit: cover;">
+                                    <img src="images/<?= $row['Img1']; ?>" class="ArticlePreviewMainImg">
                                 </a>
                             </div>
                         </div>

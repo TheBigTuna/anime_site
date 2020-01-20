@@ -31,9 +31,9 @@
                             <div class="row">
                                 <div class="col-sm-12 col-lg-12">
                                     <!-- First picture for the current article -->
-                                    <div class="ArticlePreviewMainPictureBG" style="padding: 30px;">
+                                    <div class="ArticlePreviewMainPictureBG">
                                         <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>">
-                                            <img src="/anime_site/images/<?= $row['Img1']; ?>" class="ArticlePreviewMainImg" style="height: 100%;">
+                                            <img src="/anime_site/images/<?= $row['Img1']; ?>" class="ArticlePreviewMainImg">
                                         </a>
                                     </div>
                                     <div class="ArticlePreviewInfoSection">
