@@ -3,39 +3,43 @@
 
 // Depending on the page apply the appropiate title
 if(strpos($_SERVER['REQUEST_URI'],"/admin") > -1){
-    $_SESSION['CurrentPage'] = "admin - animerooms.com";
-    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
+    $_SESSION['CurrentPage'] = "admin - animerooms";
+    $_SESSION['Description'] = "Welcome to animerooms, a place where you can come to learn and discuss anything anime and manga related.";
     if(strpos($_SERVER['REQUEST_URI'],"index.php") == False){
         verifyAdmin();
     }
 }
+else if(strpos($_SERVER['REQUEST_URI'],"/")){
+    $_SESSION['CurrentPage'] = "animerooms";
+    $_SESSION['Description'] = "Welcome to animerooms, a place where you can come to learn and discuss anything anime and manga related.";
+}
 else if(strpos($_SERVER['REQUEST_URI'],"/index.php")){
-    $_SESSION['CurrentPage'] = "home - animerooms.com";
-    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
+    $_SESSION['CurrentPage'] = "home - animerooms";
+    $_SESSION['Description'] = "Welcome to animerooms, a place where you can come to learn and discuss anything anime and manga related.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/lifestyle.php")){
-    $_SESSION['CurrentPage'] = "lifestyle - animerooms.com";
-    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
+    $_SESSION['CurrentPage'] = "lifestyle - animerooms";
+    $_SESSION['Description'] = "Welcome to animerooms, a place where you can come to learn and discuss anything anime and manga related.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/contact.php")){
-    $_SESSION['CurrentPage'] = "contact - animerooms.com";
-    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
+    $_SESSION['CurrentPage'] = "contact - animerooms";
+    $_SESSION['Description'] = "Welcome to animerooms, a place where you can come to learn and discuss anything anime and manga related.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/anime.php")){
-    $_SESSION['CurrentPage'] = "anime - animerooms.com";
-    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
+    $_SESSION['CurrentPage'] = "anime - animerooms";
+    $_SESSION['Description'] = "Welcome to animerooms, a place where you can come to learn and discuss anything anime and manga related.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/manga.php")){
-    $_SESSION['CurrentPage'] = "manga - animerooms.com";
-    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
+    $_SESSION['CurrentPage'] = "manga - animerooms";
+    $_SESSION['Description'] = "Welcome to animerooms, a place where you can come to learn and discuss anything anime and manga related.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/about.php")){
-    $_SESSION['CurrentPage'] = "about - animerooms.com";
-    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
+    $_SESSION['CurrentPage'] = "about - animerooms";
+    $_SESSION['Description'] = "Welcome to animerooms, a place where you can come to learn and discuss anything anime and manga related.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/news.php")){
-    $_SESSION['CurrentPage'] = "news - animerooms.com";
-    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
+    $_SESSION['CurrentPage'] = "news - animerooms";
+    $_SESSION['Description'] = "Welcome to animerooms, a place where you can come to learn and discuss anything anime and manga related.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/article.php") > -1){
     // Query to fetch currently available articles
@@ -53,8 +57,8 @@ else if(strpos($_SERVER['REQUEST_URI'],"/article.php") > -1){
     $ImageArray = array($ArticleRow[0]['Img1'], $ArticleRow[0]['Img2'], $ArticleRow[0]['Img3'],$ArticleRow[0]['Img4'],$ArticleRow[0]['Img5']);
 }
 else{
-    $_SESSION['CurrentPage'] = "animerooms.com";
-    $_SESSION['Description'] = "Hello animerooms is a blog dedicated to anime.";
+    $_SESSION['CurrentPage'] = "animerooms";
+    $_SESSION['Description'] = "Welcome to animerooms, a place where you can come to learn and discuss anything anime and manga related.";
 }
 
 // If recent articles have not been stored create a recent articles variable and store the five most recent articles
