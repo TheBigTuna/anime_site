@@ -11,3 +11,6 @@
         <a href ="https://www.instagram.com/animerooms_us/" style="text-decoration: none;" target="_blank"><i class="fa fa-instagram ContactIcon" style="color: red;"></i></a>
     </div>
 </div>
+<?php
+include('../footer.php');
+?>

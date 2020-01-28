@@ -366,9 +366,31 @@ body {
   margin: 0px 0px 25px 0px;
 }
 
-/* .footerBackground{
-  background-color: red;
-} */
+.footerBackground{
+  margin-top: 20px;
+}
+
+.footerNav{
+  text-align: right;
+  margin: 0em 2em 0em 2em;
+}
+
+.footerNavMenuLink{
+  color: #413e66 !important;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.footerNavMenuLink:hover,
+.footerNavMenuLink:active,
+.footerNavMenuLink:focus{
+  color: #0a98c0 !important;
+  outline: none;
+  text-decoration: none;
+}
+
 
 	
 @media only screen and (min-width: 568px) {
