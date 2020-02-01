@@ -21,7 +21,7 @@
                                     <a class="nav-link footerNavMenuLink" href="/anime_site/layout/about.php">About</a>
                                 </li> 
                                 <li class="nav-item">
-                                    <a class="nav-link footerNavMenuLink" href="/anime_site/layout/about.php">Privacy</a>
+                                    <a class="nav-link footerNavMenuLink" href="/anime_site/resources/privacyPage.php">Privacy</a>
                                 </li>
                             </ul>
                         </div>

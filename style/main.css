@@ -317,8 +317,11 @@ body {
 }
 
 .AboutIntro{
-  font-weight: 600;
-  margin: 0px 0px 20px 0px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  border-bottom: #ededed 1px solid;
+  padding: 10px 0px;
+  font-size: 2rem;
 }
 
 .AboutTextContainer{
@@ -326,14 +329,16 @@ body {
 }
 
 .AboutOpener{
-  font-size: 17px;
-  margin: 0px 0px 20px 0px;
+  font-weight: 600;
+  font-size: 20px;
+  padding-bottom: 10px;
+  text-decoration: uppercase;
 
 }
 .AboutText{
-  font-size: 15px;
+  font-size: 1.1em;
   font-family: "Open Sans", sans-serif;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 .ContactBG{

@@ -6,7 +6,7 @@
                 <div class="AboutBG">
                     <h4 class="AboutIntro">About animerooms</h4>
                     <div class="AboutTextBG">
-                        <h5 class="AboutOpener">Hello my name is Octavius the creator of animerooms.</h5>
+                        <h5 class="AboutOpener">Hello, my name is Octavius the creator of animerooms.</h5>
                         <p class="AboutText">
                         Some of my all time favorite animes are One Piece, Samurai Champloo, School Rumble, Jojo Bizarre adventure and Welcome to the NHK. 
                         </p>
@@ -20,6 +20,9 @@
                         So please give any feedback comments, support, suggestions or criticisms that you may have on the website and let's build a community together.
                         </p>
                     </div>
+                    <?php
+                        include('../footer.php');
+                    ?>
                 </div>
             </div>
         </div>
