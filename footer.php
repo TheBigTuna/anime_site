@@ -8,13 +8,24 @@
                         <div>
                             <button class="input-group-text">Submit</button>
                         </div> -->
-                        <nav class="footerNav">
-                            <ul class="navbar-nav">
+                        <nav class="navbar navbar-expand-lg" id="mainNav">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars fa-2x"></i>
+                        </button>
+                        <div id="navbarNav">
+                            <ul class="navbar-nav" id="navbarMenu">
                                 <li class="nav-item">
-                                    <a class="nav-link footerNavMenuLink" href="/anime_site/resources/privacyPage.php">Privacy Page</a>
+                                    <a class="nav-link footerNavMenuLink" href="/anime_site/index.php">Home</a>
+                                </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link footerNavMenuLink" href="/anime_site/layout/about.php">About</a>
+                                </li> 
+                                <li class="nav-item">
+                                    <a class="nav-link footerNavMenuLink" href="/anime_site/layout/about.php">Privacy</a>
                                 </li>
                             </ul>
-                        </nav>
+                        </div>
+                    </nav>
                     </div>
                 </div>
             </div>
@@ -22,3 +33,6 @@
     </div>
 </body>
 </html>
+
+
+

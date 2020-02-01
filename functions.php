@@ -30,7 +30,7 @@
         switch ($Type){
             case "1":
                 if(strpos($Article, "!Image2!") == true){
-                    $Article = str_replace( "!Image2!", "<img src='images/" . $Images[1] . "'style='height: 280px; width: 60%; object-fit: cover;'>", $Article);
+                    $Article = str_replace( "!Image2!", "<img src='images/" . $Images[1] . "'style='height: 440px; width: 520px; object-fit: cover;'>", $Article);
                 }
                 if(strpos($Article, "!Image3!") == true){
                     $Article = str_replace( "!Image3!", "<img src='images/" . $Images[2] . "'style='height: 250px; width: 120px; float: right; object-fit: cover;'>", $Article);

@@ -332,9 +332,7 @@ body {
 }
 .AboutText{
   font-size: 15px;
-  text-indent: 10px;
   font-family: "Open Sans", sans-serif;
-  padding: 0px 20px 0px 20px;
   line-height: 1.5;
 }
 
@@ -374,6 +372,10 @@ body {
 .footerNav{
   text-align: right;
   margin: 0em 2em 0em 2em;
+}
+
+.footerNav li{
+  display: inline;
 }
 
 .footerNavMenuLink{
