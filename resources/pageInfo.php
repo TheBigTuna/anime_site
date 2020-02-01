@@ -37,13 +37,12 @@ else if(strpos($_SERVER['REQUEST_URI'],"/about.php")){
     $_SESSION['CurrentPage'] = "about - animerooms";
     $_SESSION['Description'] = "Welcome to animerooms, a place where you can come to learn and talk anything anime and manga related.";
 }
-}
-else if(strpos($_SERVER['REQUEST_URI'],"/privacyPage.php")){
-    $_SESSION['CurrentPage'] = "about - animerooms";
-    $_SESSION['Description'] = "Welcome to animerooms, a place where you can come to learn and talk anything anime and manga related.";
-}
 else if(strpos($_SERVER['REQUEST_URI'],"/news.php")){
     $_SESSION['CurrentPage'] = "news - animerooms";
+    $_SESSION['Description'] = "Welcome to animerooms, a place where you can come to learn and talk anything anime and manga related.";
+}
+else if(strpos($_SERVER['REQUEST_URI'],"/privacyPage.php")){
+    $_SESSION['CurrentPage'] = "privacy - animerooms";
     $_SESSION['Description'] = "Welcome to animerooms, a place where you can come to learn and talk anything anime and manga related.";
 }
 else if(strpos($_SERVER['REQUEST_URI'],"/article.php") > -1){
