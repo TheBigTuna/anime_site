@@ -73,6 +73,10 @@ body {
 
 }
 
+.createPostLabel{
+  margin-top: 1.3em;
+}
+
 #createPostEnterTitle, #UpdatePostEnterTitle{
   margin: 15px 0px;
 }
@@ -91,6 +95,24 @@ body {
   height: 180px;
   width: 520px;
   overflow-y: auto;
+}
+
+.createPostAltTag{
+  width: 60%;
+}
+
+.createPostCaption{
+  margin: 5px 0px;
+  width: 60%;
+}
+
+#CreatePostUploadFiles{
+  margin: 15px 0px;
+}
+
+.createPostUploadVideo, .createPostUploadLink{
+  margin: 15px 0px;
+  width: 60%;
 }
 
 #managePostTable{

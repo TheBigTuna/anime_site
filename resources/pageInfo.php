@@ -48,17 +48,46 @@ else if(strpos($_SERVER['REQUEST_URI'],"/privacyPage.php")){
 else if(strpos($_SERVER['REQUEST_URI'],"/article.php") > -1){
     // Query to fetch currently available articles
     $ID = mysqli_real_escape_string($conn, $_GET['ID']);
+
     $FetchArticles = "SELECT * FROM omoore94_animerooms.cmsarticles AS A INNER JOIN omoore94_animerooms.cmsarticlesinfo AS AI ON AI.ID = A.ID WHERE A.ID = $ID ORDER BY A.ID DESC";
     $FetchArticlesResult = mysqli_query($conn, $FetchArticles);
     $ArticleRow = array();
     while($row = mysqli_fetch_assoc($FetchArticlesResult)){
         array_push($ArticleRow, $row);
     }
+
     $_SESSION['CurrentPage'] = $ArticleRow[0]['ArticleName'];
     $_SESSION['CurrentSubtitle'] = $ArticleRow[0]['ArticleSubTitle'];
     $_SESSION['Description'] = $ArticleRow[0]['ArticleSubTitle'];
     $_SESSION['ArticleAuthor'] = $ArticleRow[0]['User'];
-    $ImageArray = array($ArticleRow[0]['Img1'], $ArticleRow[0]['Img2'], $ArticleRow[0]['Img3'],$ArticleRow[0]['Img4'],$ArticleRow[0]['Img5']);
+
+    $ImageArray = array();
+    $FetchArticlesImages = "SELECT * FROM omoore94_animerooms.cmsarticlesimages WHERE ArticleID = $ID";
+    $FetchArticlesImagesResult = mysqli_query($conn, $FetchArticlesImages);
+    while($row = mysqli_fetch_assoc($FetchArticlesImagesResult)){
+        array_push($ImageArray, $row);
+    }
+
+    $TagsArray = array();
+    $FetchArticlesTags = "SELECT * FROM omoore94_animerooms.cmsarticlestags WHERE ID = $ID";
+    $FetchArticlesTagsResult = mysqli_query($conn, $FetchArticlesTags);
+    while($row = mysqli_fetch_assoc($FetchArticlesTagsResult)){
+        array_push($TagsArray, $row);
+    }
+
+    $VideoArray = array();
+    $FetchArticlesVideos = "SELECT * FROM omoore94_animerooms.cmsarticlesvideos WHERE ID = $ID";
+    $FetchArticlesVideosResult = mysqli_query($conn, $FetchArticlesVideos);
+    while($row = mysqli_fetch_assoc($FetchArticlesVideosResult)){
+        array_push($VideoArray, $row);
+    }
+
+    $LinksArray = array();
+    $FetchArticlesLinks = "SELECT * FROM omoore94_animerooms.cmsarticleslinks WHERE ID = $ID";
+    $FetchArticlesLinksResult = mysqli_query($conn, $FetchArticlesLinks);
+    while($row = mysqli_fetch_assoc($FetchArticlesLinksResult)){
+        array_push($LinksArray, $row);
+    }
 }
 else{
     $_SESSION['CurrentPage'] = "animerooms";
@@ -70,7 +99,17 @@ else{
 if(!isset($_SESSION['RecentArticles'])){
     $_SESSION['RecentArticles'] = array();
     // Query to fetch currently available articles
-    $FetchArticles = "SELECT * FROM omoore94_animerooms.cmsarticles AS A INNER JOIN omoore94_animerooms.cmsarticlesinfo AS AI ON AI.ID = A.ID ORDER BY A.ID DESC LIMIT 10";        
+    $FetchArticles = "
+    SELECT 
+    DISTINCT
+    * 
+    FROM omoore94_animerooms.cmsarticles AS A 
+    INNER JOIN omoore94_animerooms.cmsarticlesinfo AS B ON A.ID = B.ID 
+    INNER JOIN omoore94_animerooms.cmsarticlesimages AS C ON A.ID = C.ArticleID 
+    WHERE C.ImgNum = '1'
+    ORDER BY Timestamp DESC 
+    LIMIT 10
+    ";        
     $FetchArticlesResult = mysqli_query($conn, $FetchArticles);
     while($row = mysqli_fetch_assoc($FetchArticlesResult)){
         array_push($_SESSION['RecentArticles'], $row);

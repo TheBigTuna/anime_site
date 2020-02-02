@@ -17,16 +17,18 @@
                     <div class="col-sm-12 col-lg-8">
                         <!-- First picture for the current article -->
                         <div class="ArticleMainPictureBG">
-                            <img src="images/<?= $ArticleRow[0]['Img1']; ?>" class="ArticleImg">
+                            <img src="images/<?= $ImageArray[0]['Img']; ?>" class="ArticleImg">
                         </div>
                         <!-- List tagged categories for the current article -->
                         <div class="ArticleListTags">
                             <ul>
-                                <a href="#"><li><?= $ArticleRow[0]['Tag1']; ?></li></a>
-                                <a href="#"><li><?= $ArticleRow[0]['Tag2']; ?></li></a>
-                                <a href="#"><li><?= $ArticleRow[0]['Tag3']; ?></li></a>
-                                <a href="#"><li><?= $ArticleRow[0]['Tag4']; ?></li></a>
-                                <a href="#"><li><?= $ArticleRow[0]['Tag5']; ?></li></a>
+                                <?php 
+                                    for($i=0; $i < count($TagsArray); $i++){
+                                    ?>
+                                        <a href="#"><li><?= $TagsArray[$i]['Tag']; ?></li></a>
+                                    <?php
+                                    }
+                                ?>
                             </ul>
                         </div>
                         
@@ -38,7 +40,7 @@
                                         <h6 class="ArticleSubTitle"><?= $ArticleRow[0]['ArticleSubTitle']; ?></h6>
                                     </div>
                                     <div class="ArticleTextBg">
-                                        <p id="ArticleText"><?php SplitArticle($ArticleRow[0]['Text'], $ArticleRow[0]['ArticleType'], $ImageArray); ?></p>
+                                        <p id="ArticleText"><?php SplitArticle($ArticleRow[0]['Text'], $ArticleRow[0]['ArticleType'], $ImageArray, $VideoArray, $LinksArray); ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -59,7 +61,7 @@
                                             <div class="col-sm-12 col-md-5">
                                                 <!-- Recent Article Images -->
                                                 <div class="ArticleRecentImagesContainer">
-                                                    <img src="images/<?= $row['Img1']; ?>">
+                                                    <img src="images/<?= $row['Img']; ?>">
                                                 </div>
                                             </div>
                                             <div class="col-sm-12 col-md-7">

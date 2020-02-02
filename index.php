@@ -5,25 +5,24 @@
 <div class="row">
     <div class="container">
         <div class="PageTitleBG">
-            <h1 class="PageTitle d-none">Home</h1>
+            <h1 class="PageTitle d-none">animerooms</h1>
         </div>
         <div class="ArticlePreviewBG">
         <?php
-        $FetchArticles = "SELECT * FROM omoore94_animerooms.cmsarticles AS A INNER JOIN omoore94_animerooms.cmsarticlesinfo AS B ON A.ID = B.ID ORDER BY Timestamp DESC";        
+        $FetchArticles = "
+        SELECT 
+        DISTINCT
+        * 
+        FROM omoore94_animerooms.cmsarticles AS A 
+        INNER JOIN omoore94_animerooms.cmsarticlesinfo AS B ON A.ID = B.ID 
+        INNER JOIN omoore94_animerooms.cmsarticlesimages AS C ON A.ID = C.ArticleID 
+        WHERE C.ImgNum = '1'
+        ORDER BY Timestamp DESC 
+        ";        
         $FetchArticlesResult = mysqli_query($conn, $FetchArticles);
-        $ArticleRow = array();
         $RowCount = 0;
         while($row = mysqli_fetch_assoc($FetchArticlesResult)){
             $RowCount ++;
-            // $Url = "/anime_site/article.php/" . $row['ID'] . "/";
-            // $TitleUrl = $row['ArticleName'];
-            // $TitleUrl = strtolower(trim($TitleUrl));
-            // $TitleUrl = preg_replace('/[^a-z0-9-]/', '-', $TitleUrl);
-            // $TitleUrl = preg_replace('/-+/', "-", $TitleUrl);
-            // // return rtrim($Url, '-');
-            // $Url .= $TitleUrl;
-            // echo $Url;
-
             if($RowCount == 1){
             ?>
                 <div class="AritclePreviewMainCard">
@@ -41,7 +40,7 @@
                             <!-- First picture for the current article -->
                             <div class="ArticlePreviewMainPictureBG">
                                 <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>">
-                                    <img src="images/<?= $row['Img1']; ?>" class="ArticlePreviewMainImg">
+                                    <img src="images/<?= $row['Img']; ?>" alt="<?= $row['Alt']; ?>" class="ArticlePreviewMainImg">
                                 </a>
                             </div>
                         </div>
@@ -72,7 +71,7 @@
                     <div class="row">
                         <div class="col-sm-12 col-lg-2">
                             <div class="ArticlePreviewImgContainer">
-                                <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>"><img src="images/<?= $row['Img1']; ?>" style="object-fit: cover;" class="ArticlePreviewImg"></a>
+                                <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>"><img src="images/<?= $row['Img']; ?>" alt="<?= $row['Alt']; ?>" style="object-fit: cover;" class="ArticlePreviewImg"></a>
                             </div>
                         </div>
                         <div class="col-sm-12 col-lg-10">

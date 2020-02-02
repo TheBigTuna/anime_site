@@ -1,39 +1,23 @@
 <?php
     session_start();
     include('../resources/connection.php');
-
-    $Tag1 = "";
-    $Tag2 = "";
-    $Tag3 = "";
-    $Tag4 = "";
-    $Tag5 = "";
-    $Img1 = "";
-    $Img2 = "";
-    $Img3 = "";
-    $Img4 = "";
-    $Img5 = "";
-
     
+    $Tag = "";
+    $Img = "";
+    $Vid = "";
+    $Url = "";
+    $Alt = "";
+    $Caption = "";
 
-    // Post variables to be inserted into the cmsarticles table
     $Title = mysqli_real_escape_string($conn, $_POST['Title']);
     $SubTitle = mysqli_real_escape_string($conn, $_POST['SubTitle']);
     $User = mysqli_real_escape_string($conn, "Octavius");
     $CurrentDate = mysqli_real_escape_string($conn, date("Y-m-d H:i:s"));
-
-    // Post variables to be inserted into the cmsarticlesinfo table
     $ArticleType = mysqli_real_escape_string($conn, $_POST['PostType']);
     $ArticleText = mysqli_real_escape_string($conn, $_POST['PostText']);
-    $Tag1 = mysqli_real_escape_string($conn, $_POST['Tags'][0]);
-    $Tag2 = mysqli_real_escape_string($conn, $_POST['Tags'][1]);
-    $Tag3 = mysqli_real_escape_string($conn, $_POST['Tags'][2]);
-    $Tag4 = mysqli_real_escape_string($conn, $_POST['Tags'][3]);
-    $Tag5 = mysqli_real_escape_string($conn, $_POST['Tags'][4]);
-    $Img1 = mysqli_real_escape_string($conn, $_POST['Img'][0]);
-    $Img2 = mysqli_real_escape_string($conn, $_POST['Img'][1]);
-    $Img3 = mysqli_real_escape_string($conn, $_POST['Img'][2]);
-    $Img4 = mysqli_real_escape_string($conn, $_POST['Img'][3]);
-    $Img5 = mysqli_real_escape_string($conn, $_POST['Img'][4]);
+    $Tag = mysqli_real_escape_string($conn, $_POST['Tags'][0]);
+    $Img = mysqli_real_escape_string($conn, $_POST['Img'][0]);
+    $Vid = mysqli_real_escape_string($conn, $_POST['VideoUrl'][0]);
 
     // Begin transaction
     // mysqli_begin_transaction($conn, MYSQLI_TRANS_START_READ_ONLY);
@@ -56,20 +40,151 @@
     $InsertArticleResult = mysqli_query($conn, $InsertArticle);
 
     // Insert into article info table
-    $InsertArticleInfo = "INSERT INTO omoore94_animerooms.cmsarticlesinfo (ID, ArticleType, Text, Tag1, Tag2, Tag3, Tag4, Tag5, Img1, Img2, Img3, Img4, Img5) VALUES ('$ID', '$ArticleType', '$ArticleText', '$Tag1', '$Tag2', '$Tag3', '$Tag4', '$Tag5', '$Img1', '$Img2', '$Img3', '$Img4', '$Img5'); ";  
+    $InsertArticleInfo = "INSERT INTO omoore94_animerooms.cmsarticlesinfo (ID, ArticleType, Text) VALUES ('$ID', '$ArticleType', '$ArticleText'); ";  
     $InsertArticleInfoResult = mysqli_query($conn, $InsertArticleInfo);
 
-    // Checks if a insert statement failed
-    if($FetchID == false || $InsertArticleResult == false || $InsertArticleInfoResult){
-        $InsertFail == true;
+    for($i = 0; $i < count($_POST['Img']); $i++){
+        if(!empty($_POST['Img'][$i])){
+            // Grab Image Number
+            $FetchImgNum = "              
+            SELECT  
+            max(ImgNum) AS ImgNum 
+            FROM
+            (
+                SELECT * FROM omoore94_animerooms.cmsarticlesimages WHERE ArticleID = '$ID'
+            ) a
+            ";        
+            $FetchImgNumResult = mysqli_query($conn, $FetchImgNum);
+            while($row = mysqli_fetch_assoc($FetchImgNumResult)){
+                $ImgNum = $row['ImgNum'];
+            }
+            $ImgNum ++;
+
+            // Grab Posted images
+            $Img = $_POST['Img'][$i];
+
+            // Grab Posted Alt tags
+            if(!empty($_POST['Alt'][$i])){
+                $Alt = $_POST['Alt'][$i];
+            }
+            else{
+                $Alt = "NULL";
+            }
+
+            // Grab Posted Captions
+            if(!empty($_POST['Caption'][$i])){
+                $Caption = $_POST['Caption'][$i];
+            }
+            else{
+                $Caption = "NULL";
+            }
+            $InsertArticleImages = "INSERT INTO omoore94_animerooms.cmsarticlesimages (ArticleID, ImgNum, Img, Alt, Caption) VALUES ('$ID', '$ImgNum', '$Img', '$Alt', '$Caption');";  
+            $InsertArticleImagesResult = mysqli_query($conn, $InsertArticleImages);
+        }
     }
 
-    if($InsertFail == true){
+    for($i = 0; $i < count($_POST['VideoUrl']); $i++){
+        if(!empty($_POST['VideoUrl'][$i])){
+            $FetchVideoNum = "              
+            SELECT  
+            max(VideoNum) AS VideoNum 
+            FROM
+            (
+                SELECT * FROM omoore94_animerooms.cmsarticlesvideos WHERE VideoNum = '$ID'
+            ) a
+            ";        
+            $FetchVideoNumResult = mysqli_query($conn, $FetchVideoNum);
+            while($row = mysqli_fetch_assoc($FetchVideoNumResult)){
+                $VideoNum = $row['VideoNum'];
+                $VideoNum ++;
+            }
+            $Url = $_POST['VideoUrl'][$i];
+            $InsertArticleVideos = "INSERT INTO omoore94_animerooms.cmsarticlesvideos (ID, VideoNum, Url) VALUES ('$ID', '$VideoNum', '$Url');";  
+            $InsertArticleVideosResult = mysqli_query($conn, $InsertArticleVideos);
+        }
+    }
+
+    for($i = 0; $i < count($_POST['Tags']); $i++){
+        if(!empty($_POST['Tags'][$i])){
+            $FetchTagNum = "              
+            SELECT  
+            max(TagNum) AS TagNum 
+            FROM
+            (
+                SELECT * FROM omoore94_animerooms.cmsarticlestags WHERE ID = '$ID'
+            ) a
+            ";        
+            $FetchTagNumResult = mysqli_query($conn, $FetchTagNum);
+            while($row = mysqli_fetch_assoc($FetchTagNumResult)){
+                $TagNum = $row['TagNum'];
+                $TagNum ++;
+            }
+            $Tags = $_POST['Tags'][$i];
+            $InsertArticleTags = "INSERT INTO omoore94_animerooms.cmsarticlestags (ID, TagNum, Tag) VALUES ('$ID', '$TagNum', '$Tags');";  
+            $InsertArticleTagsResult = mysqli_query($conn, $InsertArticleTags);
+        }
+    }
+
+    for($i = 0; $i < count($_POST['LinkUrl']); $i++){
+        if(!empty($_POST['LinkUrl'][$i])){
+            $FetchUrlNum = "              
+            SELECT  
+            max(UrlNum) AS UrlNum 
+            FROM
+            (
+                SELECT * FROM omoore94_animerooms.cmsarticleslinks WHERE ID = '$ID'
+            ) a
+            ";        
+            $FetchUrlNumResult = mysqli_query($conn, $FetchUrlNum);
+            while($row = mysqli_fetch_assoc($FetchUrlNumResult)){
+                $UrlNum = $row['UrlNum'];
+                $UrlNum ++;
+            }
+            $Url = $_POST['LinkUrl'][$i];
+            $InsertArticleUrl = "INSERT INTO omoore94_animerooms.cmsarticleslinks (ID, UrlNum, Url) VALUES ('$ID', '$UrlNum', '$Url');";  
+            $InsertArticleUrlResult = mysqli_query($conn, $InsertArticleUrl);
+        }
+    }
+
+
+    if($FetchIDResult == false){
+        echo "1";
+    }
+    if($InsertArticleResult == false){
+        echo "2";
+    }
+    if($InsertArticleInfoResult == false){
+        echo "3";
+    }
+    if($FetchImgNumResult == false){
+        echo "4";
+    }
+    if($InsertArticleImagesResult == false){
+        echo "5";
+    }
+    if($FetchVideoNumResult == false){
+        echo "6";
+    }
+    if($InsertArticleVideosResult == false){
+        echo "7";
+    }
+    if($FetchUrlNumResult == false){
+        echo "8";
+    }
+    if($InsertArticleUrlResult == false){
+        echo "9";
+    }
+    if($InsertArticleTagsResult == false){
+        echo "10";
+    }
+
+
+    // if($InsertFail == true){
         // $mysqli->rollback();
-    }
-    else{
+    // }
+    // else{
         // mysqli_commit($link);
-    }
+    // }
 
     header("Location: main.php");
 ?>
