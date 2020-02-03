@@ -9,6 +9,18 @@
     $RemoveArticle = "DELETE FROM omoore94_animerooms.cmsarticlesinfo WHERE ID = $ID";
     $RemoveArticleResult = mysqli_query($conn, $RemoveArticle);
 
+    $RemoveArticle = "DELETE FROM omoore94_animerooms.cmsarticlesimages WHERE ArticleID = $ID";
+    $RemoveArticleResult = mysqli_query($conn, $RemoveArticle);
+
+    $RemoveArticle = "DELETE FROM omoore94_animerooms.cmsarticleslinks WHERE ID = $ID";
+    $RemoveArticleResult = mysqli_query($conn, $RemoveArticle);
+
+    $RemoveArticle = "DELETE FROM omoore94_animerooms.cmsarticlestags WHERE ID = $ID";
+    $RemoveArticleResult = mysqli_query($conn, $RemoveArticle);
+
+    $RemoveArticle = "DELETE FROM omoore94_animerooms.cmsarticlesvideos WHERE ID = $ID";
+    $RemoveArticleResult = mysqli_query($conn, $RemoveArticle);
+
     header('Location: /anime_site/admin/managePost.php');
     exit();
 ?>

@@ -22,7 +22,7 @@
             $FetchArticlesResult = mysqli_query($conn, $FetchArticles);
             while($row = mysqli_fetch_assoc($FetchArticlesResult)){
             ?>
-                <tr class="managePostTR" onclick="openModal('<?= $row['ID']; ?>', '<?= $row['ArticleType']; ?>', '<?= $row['Tag1']; ?>', '<?= $row['Tag2']; ?>', '<?= $row['Tag3']; ?>','<?= $row['Tag4']; ?>','<?= $row['Tag5']; ?>','<?= $row['Img1']; ?>','<?= $row['Img2']; ?>','<?= $row['Img3']; ?>','<?= $row['Img4']; ?>','<?= $row['Img5']; ?>')">
+                <tr class="managePostTR" onclick="openModal('<?= $row['ID']; ?>', '<?= $row['ArticleType']; ?>')">
                 <th><?= $row['ID']; ?></th>
                 <td><?= $row['ArticleName']; ?></td>
                 <td><?= $row['ArticleSubTitle']; ?></td>
@@ -50,16 +50,6 @@
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Type</th>
-                <th scope="col">Tag1</th>
-                <th scope="col">Tag2</th>
-                <th scope="col">Tag3</th>
-                <th scope="col">Tag4</th>
-                <th scope="col">Tag5</th>
-                <th scope="col">Img1</th>
-                <th scope="col">Img2</th>
-                <th scope="col">Img3</th>
-                <th scope="col">Img4</th>
-                <th scope="col">Img5</th>
             </tr>
         </thead>
         <tbody>
@@ -76,11 +66,11 @@
 
 <script>
     // function to open post information  modal
-    function openModal(Id, Type, Tag1, Tag2, Tag3, Tag4, Tag5, Img1, Img2, Img3, Img4, Img5){
+    function openModal(Id, Type){
         $("#manageModalPost").modal("toggle");
         $("#manageModalPost").modal("show");
 
-        var modalInfoArray = [Id, Type, Tag1, Tag2, Tag3, Tag4, Tag5, Img1, Img2, Img3, Img4, Img5];
+        var modalInfoArray = [Id, Type];
         var modalPostOutput = "";
         
         // Concate table data to modalpostoutput variable
@@ -89,7 +79,7 @@
         }
         
         var modalButtonOutput = "";
-        var updatePostUrl = 'updatePost.php?ID=' + Id + '&Type=' + Type + '&Tag1=' + Tag1;
+        var updatePostUrl = 'updatePost.php?ID=' + Id + '&Type=' + Type;
         var removePostUrl = 'removePost.php?ID=' + Id;
         modalButtonOutput += "<a href=" + updatePostUrl + "><button type='button' class='btn btn-secondary'>Update</button></a>";
         modalButtonOutput += "<a href=" + removePostUrl + "><button type='button' class='btn btn-danger ml-3'>Delete</button></a>";
