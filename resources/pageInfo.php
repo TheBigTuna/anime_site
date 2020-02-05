@@ -108,7 +108,7 @@ if(!isset($_SESSION['RecentArticles'])){
     INNER JOIN omoore94_animerooms.cmsarticlesimages AS C ON A.ID = C.ArticleID 
     WHERE C.ImgNum = '1'
     ORDER BY Timestamp DESC 
-    LIMIT 10
+    LIMIT 5
     ";        
     $FetchArticlesResult = mysqli_query($conn, $FetchArticles);
     while($row = mysqli_fetch_assoc($FetchArticlesResult)){
