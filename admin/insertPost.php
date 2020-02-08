@@ -146,39 +146,6 @@
         }
     }
 
-
-    if($FetchIDResult == false){
-        echo "1";
-    }
-    if($InsertArticleResult == false){
-        echo "2";
-    }
-    if($InsertArticleInfoResult == false){
-        echo "3";
-    }
-    if($FetchImgNumResult == false){
-        echo "4";
-    }
-    if($InsertArticleImagesResult == false){
-        echo "5";
-    }
-    if($FetchVideoNumResult == false){
-        echo "6";
-    }
-    if($InsertArticleVideosResult == false){
-        echo "7";
-    }
-    if($FetchUrlNumResult == false){
-        echo "8";
-    }
-    if($InsertArticleUrlResult == false){
-        echo "9";
-    }
-    if($InsertArticleTagsResult == false){
-        echo "10";
-    }
-
-
     // if($InsertFail == true){
         // $mysqli->rollback();
     // }
