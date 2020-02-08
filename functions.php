@@ -28,11 +28,6 @@
             $Article = str_replace($FindLink, "<a href='" . $Links[$i]['Url'] . "'>", $Article);
         }
         $Article = str_replace( "Link!", "</a>", $Article);
-
-        
-
-        // Adds indentation for new paragraphs
-        $Article = str_replace( "\n", str_repeat('&nbsp;', 5), $Article);
         
         switch ($Type){
             case "1":
@@ -46,10 +41,10 @@
                     $Article = str_replace( "!Image4!", "<img src='images/" . $Images[3]['Img'] . "'style='height: 200px; width: 80%; display: block; margin: 0 auto; object-fit: scale-down;'>", $Article);
                 }
                 if(strpos($Article, "!Video1!") > -1){
-                    $Article = str_replace( "!Video1!", "<iframe width='420' height='315' src='" . $Videos[0]['Url'] . "'></iframe>", $Article);
+                    $Article = str_replace( "!Video1!", "<iframe class='VideoOutput' width='420' height='315' src='" . $Videos[0]['Url'] . "'></iframe>", $Article);
                 }
                 if(strpos($Article, "!Video2!") > -1){
-                    $Article = str_replace( "!Video2!", "<iframe width='420' height='315' src='" . $Videos[1]['Url'] . "'></iframe>", $Article);
+                    $Article = str_replace( "!Video2!", "<iframe class='VideoOutput' width='420' height='315' src='" . $Videos[1]['Url'] . "'></iframe>", $Article);
                 }
                 break;
             case "2":
@@ -63,10 +58,10 @@
                     $Article = str_replace( "!Image4!", "<img src='images/" . $Images[3]['Img'] . "'style='height: 440px; width: 90%; display: block; margin: 0 auto; object-fit: scale-down;'>", $Article);
                 }
                 if(strpos($Article, "!Video1!") > -1){
-                    $Article = str_replace( "!Video1!", "<iframe width='420' height='315' src='" . $Videos[0]['Url'] . "'></iframe>", $Article);
+                    $Article = str_replace( "!Video1!", "<iframe class='VideoOutput' width='420' height='315' src='" . $Videos[0]['Url'] . "'></iframe>", $Article);
                 }
                 if(strpos($Article, "!Video2!") > -1){
-                    $Article = str_replace( "!Video2!", "<iframe width='420' height='315' src='" . $Videos[1]['Url'] . "'></iframe>", $Article);
+                    $Article = str_replace( "!Video2!", "<iframe class='VideoOutput' width='420' height='315' src='" . $Videos[1]['Url'] . "'></iframe>", $Article);
                 }
                 break;
             case "3":

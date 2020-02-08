@@ -41,6 +41,15 @@
                                     </div>
                                     <div class="ArticleTextBg">
                                         <p id="ArticleText"><?php SplitArticle($ArticleRow[0]['Text'], $ArticleRow[0]['ArticleType'], $ImageArray, $VideoArray, $LinksArray); ?></p>
+                                        <script>
+                                            var videoOutput = $(".VideoOutput")
+                                            for(var i = 0; i < videoOutput.length; i++){
+                                                if($(window).width() < 576){
+                                                    videoOutput[i].width = '320';
+                                                    videoOutput[i].height = '215';
+                                                }
+                                            }
+                                        </script>
                                     </div>
                                 </div>
                             </div>
