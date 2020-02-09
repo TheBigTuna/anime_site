@@ -397,14 +397,17 @@ body {
 }
 
 .footerNav{
-  text-align: right;
   margin: 0em 2em 0em 2em;
 }
 
-.footerNav li{
-  display: inline;
+.footerMenu{
+  float: right;
 }
 
+.footerNavItem{
+  width: 30%;
+  float: left;
+}
 .footerNavMenuLink{
   color: #413e66 !important;
   text-transform: uppercase;
@@ -421,8 +424,6 @@ body {
   text-decoration: none;
 }
 
-
-	
 @media only screen and (min-width: 568px) {
   .container-fluid {
     width: 550px;

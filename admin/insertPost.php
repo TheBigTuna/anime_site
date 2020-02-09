@@ -90,7 +90,7 @@
             max(VideoNum) AS VideoNum 
             FROM
             (
-                SELECT * FROM omoore94_animerooms.cmsarticlesvideos WHERE VideoNum = '$ID'
+                SELECT * FROM omoore94_animerooms.cmsarticlesvideos WHERE ID = '$ID'
             ) a
             ";        
             $FetchVideoNumResult = mysqli_query($conn, $FetchVideoNum);

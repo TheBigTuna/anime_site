@@ -46,6 +46,18 @@
                 if(strpos($Article, "!Video2!") > -1){
                     $Article = str_replace( "!Video2!", "<iframe class='VideoOutput' width='420' height='315' src='" . $Videos[1]['Url'] . "'></iframe>", $Article);
                 }
+                if(strpos($Article, "!Video3!") > -1){
+                    $Article = str_replace( "!Video3!", "<iframe class='VideoOutput' width='420' height='315' src='" . $Videos[2]['Url'] . "'></iframe>", $Article);
+                }
+                if(strpos($Article, "!Video4!") > -1){
+                    $Article = str_replace( "!Video4!", "<iframe class='VideoOutput' width='420' height='315' src='" . $Videos[3]['Url'] . "'></iframe>", $Article);
+                }
+                if(strpos($Article, "!Video5!") > -1){
+                    $Article = str_replace( "!Video5!", "<iframe class='VideoOutput' width='420' height='315' src='" . $Videos[4]['Url'] . "'></iframe>", $Article);
+                }
+                if(strpos($Article, "!Video6!") > -1){
+                    $Article = str_replace( "!Video6!", "<iframe class='VideoOutput' width='420' height='315' src='" . $Videos[5]['Url'] . "'></iframe>", $Article);
+                }
                 break;
             case "2":
                 if(strpos($Article, "!Image2!") > -1){
@@ -58,10 +70,22 @@
                     $Article = str_replace( "!Image4!", "<img src='images/" . $Images[3]['Img'] . "'style='height: 440px; width: 90%; display: block; margin: 0 auto; object-fit: scale-down;'>", $Article);
                 }
                 if(strpos($Article, "!Video1!") > -1){
-                    $Article = str_replace( "!Video1!", "<iframe class='VideoOutput' width='420' height='315' src='" . $Videos[0]['Url'] . "'></iframe>", $Article);
+                    $Article = str_replace( "!Video1!", "<iframe class='VideoOutput' width='460' height='330' src='" . $Videos[0]['Url'] . "'></iframe>", $Article);
                 }
                 if(strpos($Article, "!Video2!") > -1){
-                    $Article = str_replace( "!Video2!", "<iframe class='VideoOutput' width='420' height='315' src='" . $Videos[1]['Url'] . "'></iframe>", $Article);
+                    $Article = str_replace( "!Video2!", "<iframe class='VideoOutput' width='460' height='330' src='" . $Videos[1]['Url'] . "'></iframe>", $Article);
+                }
+                if(strpos($Article, "!Video3!") > -1){
+                    $Article = str_replace( "!Video3!", "<iframe class='VideoOutput' width='420' height='315' src='" . $Videos[2]['Url'] . "'></iframe>", $Article);
+                }
+                if(strpos($Article, "!Video4!") > -1){
+                    $Article = str_replace( "!Video4!", "<iframe class='VideoOutput' width='420' height='315' src='" . $Videos[3]['Url'] . "'></iframe>", $Article);
+                }
+                if(strpos($Article, "!Video5!") > -1){
+                    $Article = str_replace( "!Video5!", "<iframe class='VideoOutput' width='420' height='315' src='" . $Videos[4]['Url'] . "'></iframe>", $Article);
+                }
+                if(strpos($Article, "!Video6!") > -1){
+                    $Article = str_replace( "!Video6!", "<iframe class='VideoOutput' width='420' height='315' src='" . $Videos[5]['Url'] . "'></iframe>", $Article);
                 }
                 break;
             case "3":
