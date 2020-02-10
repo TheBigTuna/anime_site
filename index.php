@@ -18,6 +18,7 @@
         INNER JOIN omoore94_animerooms.cmsarticlesimages AS C ON A.ID = C.ArticleID 
         WHERE C.ImgNum = '1'
         ORDER BY Timestamp DESC 
+        LIMIT 10
         ";        
         $FetchArticlesResult = mysqli_query($conn, $FetchArticles);
         $RowCount = 0;

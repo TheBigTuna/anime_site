@@ -424,6 +424,21 @@ body {
   text-decoration: none;
 }
 
+.newsletterModalContent{
+  padding: 2em;
+}
+
+.newsletterModalHeader{
+  font-size: 24px;
+  font-weight: 700;
+  margin: 15px;
+  text-align: center;
+}
+.newsletterModalPrompt{
+  font-size: 18px;
+  margin: 10px;
+}
+
 @media only screen and (min-width: 568px) {
   .container-fluid {
     width: 550px;

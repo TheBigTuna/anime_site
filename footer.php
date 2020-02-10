@@ -10,8 +10,8 @@
                         </div> -->
                         <div id="footerNav">
                             <div class="row">
-                                <div class="col-0 col-sm-8"></div>
-                                <div class="col-12 col-sm-4">
+                                <div class="col-0 col-sm-7 col-md-8"></div>
+                                <div class="col-12 col-sm-5 col-md-4">
                                     <div class="footerNavItem">
                                         <a class="nav-link footerNavMenuLink" href="/anime_site/index.php">Home</a>
                                     </div>

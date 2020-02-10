@@ -27,6 +27,7 @@
                 gtag('js', new Date());
                 gtag('config', 'UA-152462977-1');
             </script>
+            <script data-ad-client="pub-2101096746164261" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         </head>
     <body>
         <div class="container-fluid" id="mainPageContainer">
@@ -87,14 +88,18 @@
                   <div class="col-sm-12">
                     <button type="button" class="close" style="font-size: 30px; float:right;" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <br>
-                    <h4>Hey! before you go would you like to sign up for updates to our new posts?</h4>
+                    <h4 class="newsletterModalHeader">Subscribe to our newsletter</h4>
+                    <br>
+                    <h4 class="newsletterModalPrompt"><b>Hey!</b> before you go would you like to sign up for updates to our new posts?</h4>
                   </div>
                 </div>
                 <form>
-                  <div class="input-group"> 
-                    <input id="email" type="text" class="form-control" name="email" placeholder="Email">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                  </div>
+                  <div class="input-group">
+                    <input id="email" type="text" class="form-control" maxlength="75" name="email" placeholder="Email">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
                 </form>
               </div>
             </div>
