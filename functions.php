@@ -25,7 +25,7 @@
         $Article = str_replace( "Subheader!", "</span>", $Article);
         for($i=0; $i < count($Links); $i++){
             $FindLink = "!Link" . $i;
-            $Article = str_replace($FindLink, "<a href='" . $Links[$i]['Url'] . "'>", $Article);
+            $Article = str_replace($FindLink, "<a href='" . $Links[$i]['Url'] . "'>", $Article); 
         }
         $Article = str_replace( "Link!", "</a>", $Article);
         
