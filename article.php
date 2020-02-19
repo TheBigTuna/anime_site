@@ -93,7 +93,7 @@
         </div>
     </div> 
 </div> 
-<!-- Go to www.addthis.com/dashboard to customize your tools --><script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e3cdbca0bdb36bf"></script>
+<!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e3cdbca0bdb36bf"></script> -->
 <?php
     include('footer.php');
 ?>

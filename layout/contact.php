@@ -11,7 +11,7 @@
         <a href ="https://www.instagram.com/animerooms_us/" style="text-decoration: none;" target="_blank"><i class="fa fa-instagram ContactIcon" style="color: red;"></i></a>
     </div>
 </div>
-<!-- Go to www.addthis.com/dashboard to customize your tools --><script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e3cdbca0bdb36bf"></script>
+<!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e3cdbca0bdb36bf"></script> -->
 <?php
 include('../footer.php');
 ?>
