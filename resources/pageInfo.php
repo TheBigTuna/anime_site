@@ -117,7 +117,6 @@ if(!isset($_SESSION['RecentArticles'])){
 }
 
 function createSlug($Url,$Var){
-    $Url = str_replace("/anime_site", "", $Url);
     $Url = strtolower($Url);
     // if(strpos($_SERVER['REQUEST_URI'],"/article.php")){
     //     $Url = substr($Url, 0, strrpos($Url, '?'));

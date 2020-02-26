@@ -1,7 +1,7 @@
 <?php
  include('../navbar.php');
  if(isset($_SESSION['IsAdmin'])){
-    echo "<script>window.location.href = '/anime_site/admin/main.php';</script>";
+    echo "<script>window.location.href = '/admin/main.php';</script>";
  }
 ?>
 

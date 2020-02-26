@@ -30,7 +30,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="ArticlePageMainTitleBG">
-                                <a class="ArticlePreviewMainTitleLink" href="/anime_site/article.php?ID=<?= $row['ID']; ?>">
+                                <a class="ArticlePreviewMainTitleLink" href="/article.php?ID=<?= $row['ID']; ?>">
                                     <h4 class="ArticlePreviewMainTitle"><?= $row['ArticleName']; ?></h4>
                                 </a>
                             </div>
@@ -40,7 +40,7 @@
                         <div class="col-sm-12 col-lg-12">
                             <!-- First picture for the current article -->
                             <div class="ArticlePreviewMainPictureBG">
-                                <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>">
+                                <a href="/article.php?ID=<?= $row['ID']; ?>">
                                     <img src="images/<?= $row['Img']; ?>" alt="<?= $row['Alt']; ?>" class="ArticlePreviewMainImg">
                                 </a>
                             </div>
@@ -52,11 +52,11 @@
                                     <p class="ArticlePreviewInfoText"> by <?= $row['User']; ?> | <?= date("F d, Y",strtotime($row['Timestamp'])); ?></p>
                                     <?php
                                         if(strlen($row['ArticleSubTitle']) > 125){
-                                            $row['ArticleSubTitle'] = substr_replace($row['ArticleSubTitle'], "<span style='font-size:16px; font-weight: 600;'>....</span><a href='/anime_site/article.php?ID=" . $row['ID'] . "'><span style='font-size:13px; color: #1bb1dc;'> Read More </span></a>", 250);
+                                            $row['ArticleSubTitle'] = substr_replace($row['ArticleSubTitle'], "<span style='font-size:16px; font-weight: 600;'>....</span><a href='/article.php?ID=" . $row['ID'] . "'><span style='font-size:13px; color: #1bb1dc;'> Read More </span></a>", 250);
                                         }
                                     ?>
                                 <p class="ArticlePreviewImgText"><?= $row['ArticleSubTitle']; ?></p>
-                                <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>">
+                                <a href="/article.php?ID=<?= $row['ID']; ?>">
                                     <p class="ArticlePreviewInfoOptions">Read Article</p>
                                 </a>
                             </div>
@@ -72,16 +72,16 @@
                     <div class="row">
                         <div class="col-sm-12 col-lg-2">
                             <div class="ArticlePreviewImgContainer">
-                                <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>"><img src="images/<?= $row['Img']; ?>" alt="<?= $row['Alt']; ?>" style="object-fit: cover;" class="ArticlePreviewImg"></a>
+                                <a href="/article.php?ID=<?= $row['ID']; ?>"><img src="images/<?= $row['Img']; ?>" alt="<?= $row['Alt']; ?>" style="object-fit: cover;" class="ArticlePreviewImg"></a>
                             </div>
                         </div>
                         <div class="col-sm-12 col-lg-10">
                             <div class="ArticlePreviewContent">
-                                <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>"><h5 class="ArticlePreviewTitle"><?= $row['ArticleName']; ?></h5></a>
+                                <a href="/article.php?ID=<?= $row['ID']; ?>"><h5 class="ArticlePreviewTitle"><?= $row['ArticleName']; ?></h5></a>
                                 <!-- <h6 class="ArticlePreviewSubTitle"><?= $row['ArticleSubTitle']; ?></h6> -->
                                 <?php
                                     if(strlen($row['Text']) > 250){
-                                        $row['Text'] = substr_replace($row['Text'], "<span style='font-size:16px; font-weight: 600;'>....</span><a href='/anime_site/article.php?ID=" . $row['ID'] . "'><span style='font-size:13px; color: #1bb1dc;'> Read More </span></a>", 250);
+                                        $row['Text'] = substr_replace($row['Text'], "<span style='font-size:16px; font-weight: 600;'>....</span><a href='/article.php?ID=" . $row['ID'] . "'><span style='font-size:13px; color: #1bb1dc;'> Read More </span></a>", 250);
                                     }
                                 ?>
                                 <p class="ArticlePreviewText"><?= $row['Text']; ?></p>

@@ -13,13 +13,13 @@
                                 <div class="col-0 col-sm-7 col-md-8"></div>
                                 <div class="col-12 col-sm-5 col-md-4">
                                     <div class="footerNavItem">
-                                        <a class="nav-link footerNavMenuLink" href="/anime_site/index.php">Home</a>
+                                        <a class="nav-link footerNavMenuLink" href="/index.php">Home</a>
                                     </div>
                                     <div class="footerNavItem">
-                                        <a class="nav-link footerNavMenuLink" href="/anime_site/layout/about.php">About</a>
+                                        <a class="nav-link footerNavMenuLink" href="/layout/about.php">About</a>
                                     </div>
                                     <div class="footerNavItem">
-                                        <a class="nav-link footerNavMenuLink" href="/anime_site/resources/privacyPage.php">Privacy</a>
+                                        <a class="nav-link footerNavMenuLink" href="/resources/privacyPage.php">Privacy</a>
                                     </div>
                                 </div>
                             </div>

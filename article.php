@@ -65,7 +65,7 @@
                                     // Loop throught the recent articles session array
                                     foreach($_SESSION['RecentArticles'] as $row){
                                 ?>
-                                    <a href="/anime_site/article.php?ID=<?= $row['ID']; ?>">
+                                    <a href="/article.php?ID=<?= $row['ID']; ?>">
                                         <div class="row" style="margin: 20px 0px;">
                                             <div class="col-sm-12 col-md-5">
                                                 <!-- Recent Article Images -->

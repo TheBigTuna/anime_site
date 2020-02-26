@@ -15,7 +15,7 @@
     // Redirects the user depending if the passwords match or not
     if($_POST['adminLogin'] === $Passwords){
         $_SESSION['IsAdmin'] = true;
-        header('Location: /anime_site/admin/main.php');
+        header('Location: /admin/main.php');
     }
     else{
         header('Location:' . $_SERVER['HTTP_REFERER']);
